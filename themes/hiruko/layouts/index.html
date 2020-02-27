@@ -3,7 +3,7 @@
 	{{ partial "navbar.html" . }}
 	<main class="hiruko-container bg-white">
 		<div class="articles text-dark">
-		{{- $paginator := .Paginate (where .RegularPages "Params.type" "post") .Site.Params.Paginate }}
+		{{- $paginator := .Paginate (where .Site.RegularPages "Params.type" "post") .Site.Params.Paginate }}
 		{{- range $page := $paginator.Pages }}
 			<article class="post-block">
 				<h2 class="post-title">
