@@ -101,7 +101,7 @@
             },
             "Mermaid":{
                  "Path": "/js/libs",
-                "Version": "800RC8"
+                "Version": "8.4.8"
             },
             "HighLight": {
                 "Path": "//cdn.staticfile.org",
@@ -127,7 +127,7 @@
             },
             "videojs": {
                 "Path": "/js/libs",
-                "Version": "7.5.0"
+                "Version": "7.7.5"
             },
             "photoswipe": {
                 "Path": "/js/libs",
@@ -135,7 +135,7 @@
             },
             "vanillaback2top":{
                 "Path": "/js/libs",
-                "Version": "7.2.0"
+                "Version": "7.2.1"
             },
             "Aplayer": {
                 "Path": "/js/libs",
@@ -143,7 +143,7 @@
             },
             "Meting": {
                 "Path": "/js/libs",
-                "Version": "1.1.1"
+                "Version": "2.0.1"
             }
         }
     },
