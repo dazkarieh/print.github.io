@@ -4,7 +4,7 @@
   {{ partial "navbar.html" . }}
   <main class="hiruko-container">
     <div class="archive col-md-8 col-xs-12">
-      {{- $paginator := .Paginate .data.Pages.ByDate.Reverse .Site.Params.archivepaginate -}}
+      {{- $paginator := .Paginate .Data.Pages.ByDate.Reverse .Site.Params.archivepaginate -}}
       {{- range $page := $paginator.Pages }}
       <div class="post-item">
         <a href="{{.RelPermalink}}" class="post-item-link">
