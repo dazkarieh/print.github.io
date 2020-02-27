@@ -1,0 +1,145 @@
++++
+title= "hugo 0.55.0彩蛋版有哪些变化"
+date= 2019-04-17T08:38:22+08:00
+type = "post"
+tags = ["hugo","shortcodes"]
+categories = ["技术"]
+draft = false
+comments = true
+reward = true
+mathjax = false
+codes = ["bash"]
+slug = "whats new in hugo early easter egg edition"
+keywords = ["hugo","shortcodes"]
++++
+4月8日，时下最火的SSG工具Hugo悄然推出了彩蛋版（Easter Egg Edition）`0.55.0`，四天后又火速修复了四项issue，并升级为`0.55.1`版。Hugo闪电般响应速度与详尽的官方文档一直令用户引以为傲。
+
+{{< img src="https://ian2.oss-cn-hangzhou.aliyuncs.com/clt6/20190417101409.png" >}}
+
+这些都不是重点，重点是新版对简码功能的修订值得一提，原文摘录如下：
+
+>Shortcodes using the {{%/* */%}} as the outer-most delimiter will now be fully rendered when sent to the content renderer (e.g. Blackfriday for Markdown), meaning they can be part of the generated table of contents, footnotes, etc.[^1]
+
+<!--more-->
+## 谨慎升级，简码有细微调整
+
+据Hugo过去的版本使用经验，相较于{{%/* */%}}，另一种标记写法{{</* */>}}与markdownify的衔接会更好。
+
+为了便于理解，我们可以通过比较来展示区别。先创建一个最简洁的`div-box`简码，源码如下：
+
+```bash
+ < div class="box" > {{ .Inner }} </ div >
+```
+### {{</* */>}}一如既往，0.55.0版没有变化
+
+```bash
+ {{</* div-box */>}}**Hello world!**{{</* /div-box */>}}
+```
+ hugo对开闭标记之间的inner内容，不会进行包括markdown在内的多余引擎动作。
+
+```bash
+ < div class="box" > **Hello world!** </ div >
+```
+
+### {{%/* */%}}自0.55.0版开始有了细微变化
+```bash
+ {{%/* div-box */%}}**Hello world!**{{%/* /div-box */%}}
+```
+在0.55.0之前的版本里，开闭标记之间的inner内容变量会根据句法自动转译（如markdown标记）。
+
+```bash
+ < div class="box" >< strong > Hello world! </ strong ></ div >
+```
+{{< notice warning >}}
+但是注意：从0.55版本开始， inner 变量调用{{%/* */%}}的效果也开始与{{</* */>}}保持同一性。换而言之，即便开闭标记内有markdown句法，也不会自动进行转译处理！
+{{< /notice >}}
+
+```bash
+ < div class="box" > **Hello world!** </ div >
+```
+### 0.55.0版简码中的markdown标记如何被渲染
+
+很简单，传递参数指定由hugo自带的markdownify进行处理。
+
+```bash
+ < div class="box" > {{ .Inner | markdownify }} </ div >
+```
+开闭标记之间的inner变量需要被传递到markdownify编辑器，才能精确转译。
+
+实际上，{{%/* */%}}内部仍然会对markdown进行处理，只是在inner内容处并未输出结果。为了测试这一点，我们创建一个span名字的简码：
+
+```bash
+ < span > {{ .Inner }} </ span >
+```
+在结果显示的markdown表单里，我们可以明显看到两者的区别：
+
+```bash
+ | I want to emphasize | | ---------- | | {{</* span */>}}**Emphasis**{{</* /span */>}} | |{{%/* span */%}}**Emphasis**{{%/* /span */%}} |
+```
+{{< img src="https://ian2.oss-cn-hangzhou.aliyuncs.com/clt6/20190417102050.png" >}}
+
+因此，有理由相信未来Hugo在{{ }}上的变化趋势：
+
+- {{</* .Inner */>}}： 精确控制，直接决定inner内容是否转译为markdown文档
+- {{%/* .Inner */%}}： 内容依赖，通过内容判断如何处理inner内容( 如shortcodes嵌套 )
+
+Hugo这一次向后兼容的更新，让一批率先抢螃蟹吃的用户简码库损失惨重。如果你已经升级，但又不适应0.55.0，官方提供了一种绥靖方案，在调用的shortcodes模板开头加入以下申明：
+
+```bash
+{{ $_hugo_config := `{ "version": 1 }` }}
+```
+
+如果还未升级，正在持观望态度，建议先了解更新详情后再作出决断。
+
+## 0.55.0版预告取消若干变量参数
+
+{{< img src="https://ian2.oss-cn-hangzhou.aliyuncs.com/clt6/20190417173444.png" >}}
+
+另一大值得注意的地方是，当Hugo升级到0.55.0后，如果你的模板代码仍含有`.Hugo`、`.RSSLink`以及`.GetParam`等3个变量或参数，运行后会出现如下提示：
+
+```bash
+$ hugo server
+WARN 2019/04/17 09:00:00 Page's .Hugo is deprecated and will be removed in a future release. Use the global hugo function.
+WARN 2019/04/17 09:00:00 Page's .RSSLink is deprecated and will be removed in a future release. Use the Output Format's link, e.g. something like:
+    {{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}.
+WARN 2019/04/17 09:00:00 Page's .GetParam is deprecated and will be removed in a future release. Use .Param or .Params.myParam.
+```
+
+对于`.Hugo`，可替代的方案很多[^2]：
+
+| 变量名称 | 输出内容 |
+| :-: | :-: |
+| {{ hugo.Generator }} 或者{{ $.Hugo.Generator }}[^3]| `<meta name="generator" content="Hugo 0.55.1" />` |
+| {{ hugo.Version }} | `0.55.1` |
+| {{ hugo.CommitHash }} | `223b3c2e` |
+| {{ hugo.BuildDate }} | `2019-04-12T09:56:45Z` |
+| {{ hugo.Environment }} | `production` |
+
+`.RSSLink`变量也在预告被移除的名单之列，取而代之，你可以用.AlternativeOutputFormats和.OutputFormats变量。
+
+在head元素里，你可以这么写：
+
+```bash
+{{ with .Site.Home.AlternativeOutputFormats.Get "RSS" }} < link rel = "alternate" href = "{{ .Permalink }}" type = "application/rss+xml" title = "{{ $.Site.Title | plainify }}" > {{ end }}
+```
+在非head元素里，你也可以这么写：
+
+```bash
+{{ with .OutputFormats.Get "RSS" }} < a href = '{{ .RelPermalink }}' title = 'Feed' > Feed </ a > {{ end }}
+```
+
+至于`.GetParam`，许久前就已经被Hugo声明放弃了，如果还有人置若罔闻，那可真是食古不化了。
+
+## 0.55.0版本：速度更快，内存更小
+
+新版本的第三个亮点是提速+缩时。据官方介绍，通过第三方工具显示，相比过去的版本，内存占用和生成时间均降低10%以上, 当然这也取决于站点结构、内容。
+
+{{< img src="https://ian2.oss-cn-hangzhou.aliyuncs.com/clt6/20190417193338.png" >}}
+
+难得的是，hugo的每个版本在增加新功能与提高站点性能的纳什均衡上，取得了不俗表现。
+
+如果想了解更多生成信息，建议在配置中开启`--enableGitInfo`, 报告文件包含每一次生成所耗费的时间。
+
+[^1]: [hugo 0.55.0官方更新文档](https://gohugo.io/news/0.55.0-relnotes/)
+[^2]: [Hugo 0.55 リリースでまた後方互換性が壊れた](https://text.baldanders.info/hugo/broken-backward-compatibility-by-hugo-0_55/)
+[^3]: [.Hugo.Generator は廃止されるので hugo.Generator を使おう](https://qiita.com/peaceiris/items/b6d611e184b2f28cc0ab)

@@ -1,0 +1,18 @@
+<!-- image -->
+<figure><picture {{ with .Get "class" }}class="{{.}}"{{ end }}>
+    {{ with .Get "link"}}<a href="{{.}}">{{ end }}
+        <source type="image/webp" srcset="{{ .Get "src" }}@!webp" {{ if or (.Get "alt") (.Get "caption") }}alt="{{ with .Get "alt"}}{{.}}{{else}}{{ .Get "caption" }}{{ end }}"{{ end }} >
+        <img  {{ with .Get "class" }}class="{{.}}"{{ end }} srcset="{{ .Get "src" }}" {{ if or (.Get "alt") (.Get "caption") }}alt="{{ with .Get "alt"}}{{.}}{{else}}{{ .Get "caption" }}{{ end }}"{{ end }} >
+    {{ if or (or (.Get "alt") (.Get "caption")) (.Get "attr")}}
+    <figcaption>{{ if isset .Params "alt" }}
+        {{ .Get "alt" }}{{ end }}
+        {{ if or (.Get "caption") (.Get "attr")}}
+        {{ .Get "caption" }}
+        {{ with .Get "attrlink"}}<a href="{{.}}"> {{ end }}
+            {{ .Get "attr" }}
+        {{ if .Get "attrlink"}}</a> {{ end }}
+        {{ end }}
+    </figcaption>
+    {{ end }}
+</picture></figure>
+<!-- image -->

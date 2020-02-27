@@ -1,0 +1,26 @@
+{{ if eq .Params.comments true }}
+   <div class="vcomments"></div>
+    <script src="/js/av-min.js"></script>
+    <script src="/js/Valine.min.js"></script>
+    <script>
+        var GUEST = ['nick','mail','link'];
+        var meta = '{{ .Site.Params.Valine.meta }}';
+        meta = meta.split(',').filter(function (item) {
+            return GUEST.indexOf(item)>-1;
+        });
+        var notify = '{{ .Site.Params.Valine.notify }}' == true ? true : false;
+        var verify = '{{ .Site.Params.Valine.verify }}' == true ? true : false;
+        new Valine({
+            el: '.vcomments',
+            emoticon_url: '{{ .Site.Params.Valine.emojiURL }}',
+            emoticon_list: ["狂汗.png","不说话.png","哭泣.png","邪恶.png","吐舌.png","无奈.png","内伤.png","脸红.png","得意.png","汗.png","喜极而泣.png","赞一个.png","吐血倒地.png","击掌.png","喷水.png","黑线.png","口水.png","中刀.png","中指.png","害羞.png","惊喜.png","扇耳光.png","瞅你.png"],
+            notify: notify,
+            verify: verify,
+            app_id: "{{ .Site.Params.Valine.ID }}",
+            app_key: "{{ .Site.Params.Valine.Key }}",
+            placeholder: "{{ .Site.Params.Valine.placeholder }}",
+            avatar:"{{ .Site.Params.Valine.avatar }}",
+            meta:meta
+        });
+      </script>
+{{ end }}

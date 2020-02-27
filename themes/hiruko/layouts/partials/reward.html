@@ -1,0 +1,35 @@
+{{ if or .Params.reward (and .Site.Params.reward.enable (ne .Params.reward false)) }}
+<div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>{{ $.Site.Params.reward.Comment }}</div>
+  <button id="rewardButton" disable="enable" style="width:80px;outline:0.8px;line-height:38px;text-align:center;font-weight:bold;color: #fff;border-radius: 5px;
+margin:3px 20px 20px 0;position: relative;overflow: hidden;color: #8c96a0;text-shadow:1px 1px 1px #fff;border:1px solid #dce1e6;box-shadow: 0 1px 2px #fff inset,0 -1px 0 #a8abae inset;background: -webkit-linear-gradient(top,#f2f3f7,#e4e8ec);background: -moz-linear-gradient(top,#f2f3f7,#e4e8ec);background: linear-gradient(top,#f2f3f7,#e4e8ec);" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    鼓励
+  </button>
+  <div id="QR" style="display: none;">
+    {{ if .Site.Params.reward.Wechat }}
+      <div id="wechat" style="display: inline-block;width:122px;height:150px;font-size:12px;">
+        <picture>
+        <source type="image/webp" srcset="{{ $.Site.Params.reward.Wechat }}@!webp"  alt="{{ $.Site.Params.author }} WeChat Pay">
+        <img srcset="{{ $.Site.Params.reward.Wechat }}" alt="{{ $.Site.Params.author }} WeChat Pay">
+        <figurecaption>微信</figurecaption>
+      </picture>
+      </div>
+   {{- end }}
+   {{ if .Site.Params.reward.Alipay }}
+      <div id="alipay" style="display: inline-block;width:122px;height:150px;font-size:12px;">
+          <picture>
+        <source type="image/webp" srcset="{{ $.Site.Params.reward.Alipay }}@!webp"  alt="{{ $.Site.Params.author }} Alipay Pay">
+        <img srcset="{{ $.Site.Params.reward.Alipay }}" alt="{{ $.Site.Params.author }} Alipay Pay">
+        <figurecaption>支付宝</figurecaption>
+      </picture>
+      </div>
+    {{- end }}
+    {{ if .Site.Params.reward.Bitcoin }}
+      <div id="bitcoin" style="display: inline-block">
+        <img id="bitcoin_qr" src="{{ $.Site.Params.reward.Bitcoin }}" alt="{{ $.Site.Params.author }} Bitcoin"/>
+        <p>比特币</p>
+      </div>
+   {{- end }}
+  </div>
+</div>
+{{- end }}

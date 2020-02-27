@@ -1,0 +1,44 @@
+<div class="post">
+  <article class="post-block">
+    <h1 class="post-title text-dark">{{ .Title }}</h1>
+    <div class="post-info text-dark">
+      <i class="fa fa-calendar-plus-o"></i><span>&nbsp;{{ .Date.Format "2006年1月2日" }}&nbsp;&nbsp;&nbsp;</span>
+              {{ if .Site.Params.readingtime }}
+              <i class="fa fa-file-word-o"></i><span>&nbsp;约 {{ .WordCount }} 字&nbsp;&nbsp;&nbsp;</span>
+              <i class="fa fa-clock-o"></i><span>&nbsp;需时 {{ .ReadingTime }} 分钟&nbsp;&nbsp;&nbsp;</span>
+               {{ if .Site.Params.NightMode }}<i class="fa fa-toggle-off fa-lg zoomlink" id="toggle" onclick="toggleTheme()" ></i><span>夜间模式</span> {{ end }}
+          {{ end }}
+        </div>
+    <div class="post-entry text-dark">{{ .Content | replaceRE "<p><img src=\"([^\"]+)\" alt=\"([^\"]+)\" /></p>" "<figure><img src=\"$1\" alt=\"$2\"><figcaption>$2</figcaption></figure>" | safeHTML }}</div>
+ {{ partial "sharing.html" . }}
+ {{ partial "reward.html" . }}
+ {{ if .Params.tags -}}
+    <div class="post-tags-box text-dark">
+      {{ range $id, $name := .Params.tags }}
+      {{ if $id }},{{ end }}
+      <a class="tag-link" href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}">{{ $name }}</a>
+      {{ end }}
+    </div>
+{{ end -}}
+  </article>
+</div>
+
+<div class="post-nav">
+  {{ if .PrevInSection }}
+  <div class="prev-wrap col-md-6 col-xs-6">
+    <i class="fa fa-arrow-circle-left"></i>
+    <a href="{{.PrevInSection.Permalink}}" class="prev-post">{{.PrevInSection.Title}}</a>
+  </div>
+  {{ end }}
+
+  {{ if .NextInSection }}
+  <div class="next-wrap col-md-6 col-xs-6">
+    <a href="{{.NextInSection.Permalink}}" class="prev-post">{{.NextInSection.Title}}</a>
+    <i class="fa fa-arrow-circle-right"></i>
+  </div>
+  {{ end }}
+</div>
+
+ {{ if eq .Params.comments true -}}
+    {{ partial "comment.html" . }}
+    {{ end -}}

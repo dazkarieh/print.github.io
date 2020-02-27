@@ -1,0 +1,136 @@
++++
+title= "如何自定义hugo图文混排的图片展示位置"
+date= 2019-02-26T10:26:00+08:00
+tags = ["hugo","css"]
+mathjax = false
+categories = ["前端"]
+codes =["css","bash","md"]
+toc = true
+slug = "how handle image relative position within hugo md"
+keywords = ["hugo","css"]
+description = "XXYYZZ"
++++
+曾经说过，用上Hugo后就起飞了，但有两个地方一直困扰着我，一是图片位置、说明等细节，二是Markdown的外链打开方式。之前解决了后者，今天来说说前者。
+
+其实，解决方案很简单，完全可以通过css来实现。
+
+## 方案一
+### 图文混排，图片居中
+```css
+.post-entry img[src$='#center']
+{
+    display: block;
+    margin: 0.7rem auto; /* you can replace the vertical '0.7rem' by
+                            whatever floats your boat, but keep the
+                            horizontal 'auto' for this to work */
+    box-shadow: 0 0 10px #555;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 0 0px #ece7e7;
+    -moz-box-shadow: 0 0 0px #ece7e7;
+    max-width: 75%;
+    vertical-align: middle;
+    /* whatever else styles you fancy here */
+}
+```
+效果如下：
+{{< figure src="http://ian2.oss-cn-hangzhou.aliyuncs.com/2019-02-27-061114.jpg" width="90%" caption="图片居中" caption-position="bottom" caption-effect="fade">}}
+
+### 图文混排，图片居左
+```css
+.post-entry img[src$='#left']
+{
+    float:left;
+    margin: 0.7rem;      /* this margin is totally up to you */
+    box-shadow: 0 0 10px #555;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 0 0px #ece7e7;
+    -moz-box-shadow: 0 0 0px #ece7e7;
+    max-width: 45%;
+    /* whatever else styles you fancy here */
+}
+```
+效果如下：
+{{< figure src="https://ian2.oss-cn-hangzhou.aliyuncs.com/2019-02-27-060502.jpg" width="90%" caption="图片居左" caption-position="bottom" caption-effect="fade">}}
+
+### 图文混排，图片居右
+```css
+.post-entry img[src$='#right']
+{
+    float:right;
+    margin: 0.7rem;      /* this margin is totally up to you */
+    box-shadow: 0 0 10px #555;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 0 0px #ece7e7;
+    -moz-box-shadow: 0 0 0px #ece7e7;
+    max-width: 45%;
+    /* whatever else styles you fancy here */
+}
+```
+效果如下：
+{{< figure src="http://ian2.oss-cn-hangzhou.aliyuncs.com/2019-02-27-061427.jpg" width="90%" caption="图片居右" caption-position="bottom" caption-effect="slide">}}
+
+### Markdown写法
+
+```md
+#基本格式
+![alt](url#left "title")
+![alt](url#right "title")
+![alt](url#center "title")
+#范例
+![曾我部惠一](https://ian2.oss-cn-hangzhou.aliyuncs.com/2019-02-20-062929.jpg#left "Live at SHIBUYA CLUB QUATTRO")
+```
+
+## 方案二
+另外，还发现了一种更简洁的CSS3写法
+
+### 图文混排，图片居右
+```css
+.post-entry img[alt$=">"] {
+    float: right;
+    margin: 0.7rem;      /* this margin is totally up to you */
+    box-shadow: 0 0 10px #555;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 0 0px #ece7e7;
+    -moz-box-shadow: 0 0 0px #ece7e7;
+    max-width: 45%;
+}
+```
+### 图文混排，图片居左
+```css
+.post-entry img[alt$="<"] {
+    float: left;
+    margin: 0.7rem;      /* this margin is totally up to you */
+    box-shadow: 0 0 10px #555;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 0 0px #ece7e7;
+    -moz-box-shadow: 0 0 0px #ece7e7;
+    max-width: 45%;
+}
+```
+### 图文混排，图片居中
+```css
+.post-entry img[alt$="><"] {
+    display: block;
+    float: none!important;
+    margin: 0.7rem auto; /* you can replace the vertical '0.7rem' by
+                            whatever floats your boat, but keep the
+                            horizontal 'auto' for this to work */
+    box-shadow: 0 0 10px #555;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 0 0px #ece7e7;
+    -moz-box-shadow: 0 0 0px #ece7e7;
+    max-width: 75%;
+    vertical-align: middle;
+    /* whatever else styles you fancy here */
+
+}
+```
+### Markdown写法
+```md
+#基本格式
+![alt >](url "title")
+![alt <](url "title")
+![alt ><](url "title")
+#范例
+![曾我部惠一 <](https://ian2.oss-cn-hangzhou.aliyuncs.com/2019-02-20-062929.jpg "Live at SHIBUYA CLUB QUATTRO")
+```

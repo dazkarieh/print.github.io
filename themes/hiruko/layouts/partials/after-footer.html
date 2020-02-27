@@ -1,0 +1,102 @@
+<script src="{{ $.Site.Params.CDN.vanillaback2top.Path }}/vanillaback2top/{{ $.Site.Params.CDN.vanillaback2top.Version }}/vanilla-back-to-top.min.js"></script>
+<script>addBackToTop({
+  diameter: 50,
+  backgroundColor: '#fff',
+  innerHTML: '<svg viewBox="0 0 24 24"><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/></svg>',
+  textColor: 'rgb(255, 82, 82)'
+})</script>
+
+<script>
+// Pangu
+(function (u, c) {
+    var d = document, t = 'script', o = d.createElement(t),
+        s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(e); }); }
+    s.parentNode.insertBefore(o, s);
+})("{{ $.Site.Params.CDN.Pangu.Path }}/pangu/{{ $.Site.Params.CDN.Pangu.Version }}/pangu.min.js", function () {
+    pangu.spacingPage();
+});
+</script>
+
+{{- if eq .Params.vertical true }}
+<script src="{{ $.Site.Params.CDN.JQueryMouseWheel.Path }}/jquery-mousewheel/{{ $.Site.Params.CDN.JQueryMouseWheel.Version }}/jquery.mousewheel.min.js"></script>
+<script>
+      $('html, body, *').mousewheel(function(e, delta) {
+          this.scrollLeft += (delta * 100);
+          e.preventDefault();
+      });
+</script>
+{{- end }}
+
+{{- if ne .Params.mathjax false }}
+<script src="/js/before_mathjax.js"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        extensions: ['tex2jax.js'],
+        jax: ["input/TeX", "output/HTML-CSS"],
+        tex2jax: {
+            inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+            processEscapes: true,
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+        },
+        TeX: {
+            extensions: ['AMSmath.js', 'AMSsymbols.js', 'noErrors.js', 'noUndefined.js', 'extpfeil.js']
+        },
+        "HTML-CSS": {
+            availableFonts: ["TeX"],
+            scale: 85
+        },
+        CommonHTML: {
+            scale: 85
+        },
+        SVG: {
+            scale: 85
+        }
+    });
+</script>
+<script async type="text/javascript" src="{{ $.Site.Params.CDN.MathJax.Path }}/mathjax/{{ $.Site.Params.CDN.MathJax.Version }}/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+{{- end }}
+
+{{- if isset .Params "codes" }}
+<link rel="stylesheet" href="{{ $.Site.Params.CDN.HighLight.Path }}/highlight.js/{{ $.Site.Params.CDN.HighLight.Version }}/styles/{{ $.Site.Params.CDN.HighLight.Style }}.min.css"/>
+<script src="{{ $.Site.Params.CDN.HighLight.Path }}/highlight.js/{{ $.Site.Params.CDN.HighLight.Version }}/highlight.min.js"></script>
+<script src="{{ $.Site.Params.CDN.HighLightNum.Path }}/highlightjs-line-numbers.js/{{ $.Site.Params.CDN.HighLightNum.Version }}/highlightjs-line-numbers.min.js"></script>
+{{- range .Params.codes }}
+<script src="{{ $.Site.Params.CDN.HighLight.Path }}/highlight.js/{{ $.Site.Params.CDN.HighLight.Version }}/languages/{{ . }}.min.js"></script>
+{{- end }}
+<script>hljs.initHighlightingOnLoad();</script>
+<script>hljs.initLineNumbersOnLoad({
+    singleLine: true
+});</script>
+{{- end }}
+
+{{- if eq .Params.toc true }}
+<script>
+    if (typeof show_toc == 'undefined') {
+        var show_toc = true;
+    }
+    if (show_toc) {
+        $("#toc").tocify({
+            selectors: "h2,h3,h4,h5", // 选择要筛选的标题
+            extendPage: false, // 页面不够长时拉长页面，这里选择关闭因为感觉留出大片空白不好看 - -
+            highlightDefault: true, // 自动高亮第一条
+            highlightOnScroll: true,
+            scrollTo: 80,
+        });
+    }
+</script>
+{{- end }}
+
+{{ range .Site.Params.customJS }}
+<script async="async" src="{{ . | relURL }}"></script>
+{{ end }}
+
+{{ if .Site.Params.NightMode }}
+<script type="text/javascript" src="/js/toggleTheme.js"></script>
+<script type="text/javascript" src="/js/themes.js"></script>
+{{ end }}
+
+</body>
+</html>

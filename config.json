@@ -1,0 +1,156 @@
+{
+    "baseURL": "https://clt6.com",
+    "languageCode": "zh-cn",
+    "MetaDataFormat":"json",
+    "title": "消夏錄",
+    "theme": "hiruko",
+    "blackfriday": {
+    	"hrefTargetBlank":true,
+    	"nofollowLinks":true,
+    	"smartypants":false,
+        "hardLineBreak":true,
+    	"plainIDAnchors":true,
+    	"noreferrerLinks":true
+    },
+    "enableEmoji":"true",
+    "enableRobotsTXT":"true",
+    "relativeurls":"true",
+    "canonifyURLs":"true",
+ 	"hasCJKLanguage":"true",
+ 	"footnoteReturnLinkContents": "↩",
+    "params": {
+        "Paginate": 8,
+        "ArchivePaginate": 50,
+        "Description":"吹灭读书灯，一身都是月",
+        "favico":"/media/favicon.ico",
+        "logo":"https://ian2.oss-cn-hangzhou.aliyuncs.com/2018-06-22-%E6%B6%88%E5%A4%8F%E5%BD%95_cut.png",
+        "logo_max_width":"105px",
+        "author":"ian",
+        "readingtime": "true",
+        "NightMode":"true",
+        "customJS":[
+
+        ],
+        "reward":{
+        "enable": "true",
+        "Alipay": "https://ian2.oss-cn-hangzhou.aliyuncs.com/clt6/alipay_120.jpg",
+        "Wechat": "https://ian2.oss-cn-hangzhou.aliyuncs.com/clt6/wechat_120.jpg",
+        "Comment": "",
+        "Bitcoin": ""
+        },
+        "sharing": "true",
+        "NavItems" : [
+            [ "最新文章",    "/" ],
+            [ "文字归档", "/post" ],
+            [ "摄影作品", "https://icrtt.com", "_blank"],
+            [ "标签墙", "/tags"],
+            [ "作者简介",   "/about" ],
+            [ "RSS订阅",     "/index.xml" ]
+        ],
+        "AboutMe": {
+            "Motto": "Everyone is a genius at being themselves.",
+            "ImagePath": "/media/aboutme.jpg",
+            "AsideTitle": "FOLLOW ME",
+            "Links": [
+                [ "email-link", "mailto:asphodele@qq.com" ],
+                [ "github-link", "https://github.com/bosco" ],
+                [ "twitter-link", "https://twitter.com/karou" ],
+                [ "instgram-link", "https://www.instagram.com/dazkarieh" ],
+                [ "weixin-link", "http://ian2.oss-cn-hangzhou.aliyuncs.com/2018-07-06-075934.jpg"],
+                [ "weibo-link", "https://weibo.com/tolk" ]
+            ]
+        },
+        "Copyright": {
+            "Name": "Ian",
+            "From": "2015",
+            "To": "2019"
+        },
+        "Valine": {
+            "ID": "hxyN8cuSWjMXJtzzYc4cbL9U-MdYXbMMI",
+            "Key": "KfrGGB2VXb5wL4q8qJM5DLkD",
+            "emojiURL": "https://cloud.panjunwen.com/alu",
+            "placeholder": "评论留言",
+            "verify": "false",
+            "notify": "false",
+            "avatar": "mm"
+        },
+        "CDN": {
+            "JQuery": {
+                "Path": "/js/libs",
+                "Version": "3.3.1"
+            },
+            "JQueryMouseWheel": {
+                "Path": "/js/libs",
+                "Version": "3.1.13"
+            },
+            "JQueryUI": {
+                "Path": "/js/libs",
+                "Version": "1.12.1"
+            },
+            "JQueryTocify": {
+                "Path": "/js/libs",
+                "Version": "1.9.0"
+            },
+            "FancyBox": {
+                "Path": "/js/libs",
+                "Version": "3.5.6"
+            },
+            "Bootstrap": {
+                "Path": "/js/libs",
+                "Version": "3.4.1"
+            },
+            "Mermaid":{
+                 "Path": "/js/libs",
+                "Version": "800RC8"
+            },
+            "HighLight": {
+                "Path": "//cdn.staticfile.org",
+                "Version": "9.15.6",
+                "Style": "atom-one-light" ,
+                "//": "推荐atom-one-light/obsidian/railscasts/monokai/github/atom-one-dark-reasonable等"
+            },
+            "HighLightNum": {
+                "Path": "/js/libs",
+                "Version": "2.7.0"
+            },
+            "MathJax": {
+                "Path": "//cdn.staticfile.org",
+                "Version": "2.7.5"
+            },
+            "FontAwesome": {
+                "Path": "/js/libs",
+                "Version": "4.7.0"
+            },
+            "Pangu": {
+                "Path": "//cdn.staticfile.org",
+                "Version": "4.0.7"
+            },
+            "videojs": {
+                "Path": "/js/libs",
+                "Version": "7.5.0"
+            },
+            "photoswipe": {
+                "Path": "/js/libs",
+                "Version": "4.1.3"
+            },
+            "vanillaback2top":{
+                "Path": "/js/libs",
+                "Version": "7.2.0"
+            },
+            "Aplayer": {
+                "Path": "/js/libs",
+                "Version": "1.10.1"
+            },
+            "Meting": {
+                "Path": "/js/libs",
+                "Version": "1.1.1"
+            }
+        }
+    },
+    "outputs": {
+        "home": [
+            "HTML",
+            "RSS"
+        ]
+    }
+}

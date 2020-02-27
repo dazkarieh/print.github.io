@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="{{ $.Site.LanguageCode }}">
+<head>
+  <meta charset="utf-8">
+  {{ $isHomePage := eq .Title .Site.Title }}
+  <title>{{ .Title }}{{ if eq $isHomePage false }} - {{ .Site.Title }}{{ end }}</title>
+  {{ partial "SEO.html" . }}
+  {{ hugo.Generator }}
+  <link rel="icon" href="{{ $.Site.Params.favico }}">
+  <link rel="stylesheet" href="{{ $.Site.Params.CDN.photoswipe.Path }}/photoswipe/{{ $.Site.Params.CDN.photoswipe.Version }}/photoswipe.min.css" crossorigin="anonymous" />
+  <link rel="stylesheet" href="{{ $.Site.Params.CDN.photoswipe.Path }}/photoswipe/{{ $.Site.Params.CDN.photoswipe.Version }}/default-skin/default-skin.min.css" crossorigin="anonymous" />
+  <link rel="stylesheet" type="text/css" href="{{ $.Site.Params.CDN.Bootstrap.Path }}/twitter-bootstrap/{{ $.Site.Params.CDN.Bootstrap.Version }}/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="{{ $.Site.Params.CDN.FontAwesome.Path }}/font-awesome/{{ $.Site.Params.CDN.FontAwesome.Version }}/css/font-awesome.min.css" />
+
+  <!-- import google fonts through aliyun CDN -->
+  <link href="/css/google_fonts_import.css" rel="stylesheet">
+
+  {{- if eq .Params.image true }}
+  <link rel="stylesheet" href="{{ $.Site.Params.CDN.FancyBox.Path }}/fancybox/{{ $.Site.Params.CDN.FancyBox.Version }}/jquery.fancybox.min.css" />
+  {{- end }}
+
+  {{- if eq .Params.vertical true }}
+  <link rel="stylesheet" href="/css/main-vertical.css">
+  {{- else }}
+  <link rel="stylesheet" href="/css/main.css">
+  {{- end }}
+
+  <script src="{{ $.Site.Params.CDN.JQuery.Path }}/jquery/{{ $.Site.Params.CDN.JQuery.Version }}/jquery.min.js"></script>
+  <script src="{{ $.Site.Params.CDN.Bootstrap.Path }}/twitter-bootstrap/{{ $.Site.Params.CDN.Bootstrap.Version }}/js/bootstrap.min.js"></script>
+
+  {{ if ($.Scratch.Get "photoswipeloaded") }}
+<script src="/js/load-photoswipe.js"></script>
+<script src="{{ $.Site.Params.CDN.photoswipe.Path }}/photoswipe/{{ $.Site.Params.CDN.photoswipe.Version }}/photoswipe.min.js"  crossorigin="anonymous"></script>
+<script src="{{ $.Site.Params.CDN.photoswipe.Path }}/photoswipe/{{ $.Site.Params.CDN.photoswipe.Version }}/photoswipe-ui-default.min.js"  crossorigin="anonymous"></script>
+{{ end }}
+
+<!-- Video.js for post -->
+{{- if eq .Params.video true }}
+<script async src="{{ $.Site.Params.CDN.videojs.Path }}/video.js/{{ $.Site.Params.CDN.videojs.Version }}/video.min.js"></script>
+<link rel="stylesheet" href="{{ $.Site.Params.CDN.videojs.Path }}/video.js/{{ $.Site.Params.CDN.videojs.Version }}/video-js.min.css">
+{{- end }}
+
+
+<!-- mermaid for post -->
+{{- if eq .Params.Mermaid true }}
+<script src="{{ $.Site.Params.CDN.Mermaid.Path }}/Mermaid/{{ $.Site.Params.CDN.Mermaid.Version }}/mermaid.min.js" ></script>
+<link rel="stylesheet" href="{{ $.Site.Params.CDN.Mermaid.Path }}/Mermaid/{{ $.Site.Params.CDN.Mermaid.Version }}/mermaid.css" type="text/css" >
+{{- end }}
+
+<!-- douban.js for post -->
+{{- if eq .Params.douban true }}
+<script  src="/js/douban.js"></script>
+{{- end }}
+
+<!--abc files for post -->
+{{- if eq .Params.abcjs true }}
+<script src="/js/abcjs_basic_5.6.7-min.js"></script>
+{{- end }}
+
+  {{- if eq .Params.image true }}
+  <script src="{{ $.Site.Params.CDN.FancyBox.Path }}/fancybox/{{ $.Site.Params.CDN.FancyBox.Version }}/jquery.fancybox.min.js"></script>
+  <script src="/js/fancybox.js"></script>
+  {{- end }}
+
+{{- if eq .Params.toc true }}
+  <link rel="stylesheet" href="{{ $.Site.Params.CDN.JQueryUI.Path }}/jqueryui/{{ $.Site.Params.CDN.JQueryUI.Version }}/jquery-ui.min.css">
+  <link rel="stylesheet" href="{{ $.Site.Params.CDN.JQueryTocify.Path }}/jquery.tocify/{{ $.Site.Params.CDN.JQueryTocify.Version }}/stylesheets/jquery.tocify.min.css">
+{{- end }}
+
+{{ if .Params.vega }}
+<script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-lite@2"></script>
+<script src="https://cdn.jsdelivr.net/npm/vega-embed@3"></script>
+{{ end }}
+
+{{- if eq .Params.toc true }}
+<script src="{{ $.Site.Params.CDN.JQueryUI.Path }}/jqueryui/{{ $.Site.Params.CDN.JQueryUI.Version }}/jquery-ui.min.js"></script>
+<script src="{{ $.Site.Params.CDN.JQueryTocify.Path }}/jquery.tocify/{{ $.Site.Params.CDN.JQueryTocify.Version }}/javascripts/jquery.tocify.min.js"></script>
+{{- end }}
+
+<!-- import prefers-color-scheme dark mode-->
+
+</head>
+<body class="body_OBG">

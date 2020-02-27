@@ -1,0 +1,107 @@
++++
+title= "markdown链接的另一种写法"
+date= 2019-03-15T13:46:36+08:00
+type = "post"
+tags = ["markdown","hugo"]
+toc = true
+comments = true
+codes =["markdown","php"]
+categories = ["技术"]
+mathjax = false
+slug ="reference link pattern in markdown"
++++
+数年来，始终坚持用markdown写博客，自认为对markdown格式的链接写法得心应手。然而在看完[某jekyll网友的raw格式博文](https://raw.githubusercontent.com/fooleap/fooleap.github.io/master/_posts/2019-02-24-i-still-running-at-the-spring-festival.md)后，还是被惊到了，只得垂叹自己坐井观天。这位网友的插图代码别具一格：
+
+```markdown
+以下是南湾的：
+![担花篮][p6]
+![打锣][p7]
+![锣鼓后][p8]
+
+[p6]: {{ site.IMG_PATH }}/i-still-running-at-the-spring-festival-06.jpg_640 "担花篮"
+[p7]: {{ site.IMG_PATH }}/i-still-running-at-the-spring-festival-07.jpg_640 "打锣"
+[p8]: {{ site.IMG_PATH }}/i-still-running-at-the-spring-festival-08.jpg_640 "锣鼓后"
+```
+<!--more-->
+## 内联式链接（Inline link）
+相信80%以上的网友和我一样，习惯于下面的书写方式：
+```markdown
+[链接文本](url)
+![图片alt文本](url)
+```
+
+示例：
+{{< terminal "root@xdd-iMAC" "inline link" >}}
+这是一个 [例子](http://example.com/ "标题")
+[链接文本](http://example.net/)
+{{< /terminal >}}
+
+渲染出的html代码如下：
+```php
+<p>这是一个 <a href="http://example.com/" title="标题">
+例子</a> 内联式链接.</p>
+
+<p><a href="http://example.net/">链接文本</a> 不加标题参数.</p>
+```
+## 参照式链接（Reference links）
+通过放狗研究，才发现markdown不仅提供了inline link写法，还有另一种reference link的写法，姑且称之为参照式链接。
+
+reference link写法中，你可以在md文件的任意位置对一个链接的ID标签进行自定义。可以再在链接之后写注释，也可以在段落后面写，但大部分人喜欢在文章结尾进行统一注释，类似注脚（footnote）。
+
+`{{< terminal "root@xdd-iMAC" "reference link" >}}
+这是 [一个例子][id]
+[id]: http://example.com/  "标题参数选填"
+{{< /terminal >}}
+
+值得注意的reference link规范有：
+
+- 方括号内应包含如alt值等链接标识文本（可选择从左到右可缩进不超过三个空格）;
+- 跟着一个半角冒号;
+- 后接至少一个以上的空格（或者tab）;
+- 后接一个链接URL;
+- 标题参数可选填，用半角单/双引号包裹，也可以用半角圆括号包裹.
+
+### reference link示例
+**案例1**
+```markdown
+I get 10 times more traffic from [Google] [1] than from
+[Yahoo] [2] or [MSN] [3].
+
+  [1]: http://google.com/        "Google"
+  [2]: http://search.yahoo.com/  "Yahoo Search"
+  [3]: http://search.msn.com/    "MSN Search"
+```
+如果用implicit link简写，你也可以这么写：
+
+**案例2**
+```markdown
+I get 10 times more traffic from [Google][] than from
+[Yahoo][] or [MSN][].
+
+  [google]: http://google.com/        "Google"
+  [yahoo]:  http://search.yahoo.com/  "Yahoo Search"
+  [msn]:    http://search.msn.com/    "MSN Search"
+```
+以上两端markdown代码都渲染出同一段php代码：
+
+```php
+<p>I get 10 times more traffic from <a href="http://google.com/"
+title="Google">Google</a> than from
+<a href="http://search.yahoo.com/" title="Yahoo Search">Yahoo</a>
+or <a href="http://search.msn.com/" title="MSN Search">MSN</a>.</p>
+```
+如果要达到同样的渲染结果，inline link必须这么写：
+
+**案例3**
+```markdown
+I get 10 times more traffic from [Google](http://google.com/ "Google")
+than from [Yahoo](http://search.yahoo.com/ "Yahoo Search") or
+[MSN](http://search.msn.com/ "MSN Search").
+```
+## 总结
+
+reference link的优势不是更易写，而是更易读，更接近于渲染结果。
+
+案例一只有81个字符，案例二甚至只要区区75个字符，而案例三却需要176个字符。
+
+当然，reference link是否真的适合您，因人而异。对我而言，就没有太大的价值，因为reference lin渲染出来的php源码默认不支持alt文本显示。

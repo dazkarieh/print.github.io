@@ -1,0 +1,30 @@
+<nav class="page-navigation bg-white">
+    <div class="nav-container">
+        <div class="page-header-logo">
+    {{ if .Site.Params.logo }}
+        <a href="/" class="home-link">
+          <img class="custom-logo-image logo-normal" src="{{ $.Site.Params.logo }}"
+               alt="{{ $.Site.Title }}" style="max-width: {{ $.Site.Params.logo_max_width }};"/>
+        </a>
+         {{else}}
+            <h1 class="prince-log">
+                <a href="/" class="home-link">{{ $.Site.Title }}</a>
+            </h1>
+                {{ end }}
+        </div>
+
+        <button type="button" data-toggle="collapse" data-target=".main-nav-items" class="navbar-toggle">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <ul class="collapse navbar-collapse main-nav-items text-dark">
+            {{- range $item := $.Site.Params.NavItems }}
+            <li class="menu-item text-dark">
+                <a href="{{ index $item 1 }}" target="{{ index $item 2 }}">{{ index $item 0 }}</a>
+            </li>
+            {{- end }}
+        </ul>
+    </div>
+</nav>

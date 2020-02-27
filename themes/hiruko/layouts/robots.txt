@@ -1,0 +1,6 @@
+# fxxk the baidu spiders
+User-agent: Googlebot
+Disallow: /tags
+Disallow: /categories
+Disallow: /page
+Sitemap: https://clt6.com/sitemap.xml

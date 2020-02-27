@@ -1,0 +1,21 @@
+{{- if .Site.Params.Search.Enable }}
+<link href="{{"lib/search/auto-complete.css" | relURL}}" rel="stylesheet">
+<div class="search-wrapper">
+  <div class="searchbox">
+    <div id='inputfield'>
+      <i class='fa fa-search icon-search'></i>
+      <input id="search-by" autocomplete='off' autocorrect='off' name='address' placeholder="{{T "Search-placeholder"}}"
+       spellcheck='false' type='text'>
+    </div>
+  </div>
+</div>
+    <script type="text/javascript">
+      var lagoliaIndex = "{{.Site.Params.Search.index}}"
+      var lagoliaAppID = "{{.Site.Params.Search.appID}}"
+      var lagoliaSearchKey = "{{.Site.Params.Search.searchKey}}"
+    </script>
+    <script src="//cdn.jsdelivr.net/autocomplete.js/0/autocomplete.jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+    <script type="text/javascript" src="{{"/js/algolia-search-bar.js" | relURL}}"></script>
+
+{{- end}}

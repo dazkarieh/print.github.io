@@ -1,0 +1,13 @@
+{{ if .Site.Params.donate }}
+        <div id="donate" class="donate">
+          <div id="DonateText" class="tr3">Donate</div>
+          <ul id="donateBox" class="list pos-f tr3">
+            <li id="AliPay">AliPay</li>
+            <li id="WeChat">WeChat</li>
+          </ul>
+          <div id="QRBox" class="pos-f left-100">
+            <div id="AliPayQR" class="MainBox" style="background-image: url({{ $.Site.Params.donate.AliPayQR }});"></div>
+            <div id="WeChatQR" class="MainBox" style="background-image: url({{ $.Site.Params.donate.WeChatQR }});"></div>
+          </div>
+         </div>
+{{ end }}

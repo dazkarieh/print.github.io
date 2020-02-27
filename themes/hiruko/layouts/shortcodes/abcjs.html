@@ -1,0 +1,34 @@
+{{ .Page.Scratch.Add "abcjsCount" 1 }}
+{{ $id := .Page.Scratch.Get "abcjsCount" }}
+
+<div class="card mb-5" id="abcjs-{{$id}}" >
+  <div class="item-{{$id}}">
+    <div class="collapse show" id='abcjs-score-{{$id}}' role="tabpanel">
+      <div class="px-md-5 d-block">
+        <div id="abcjs-src-{{$id}}" class="card-img">
+          {{.Inner}}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="item-{{$id}}">
+    <div class="collapse" id="abcjs-code-{{$id}}" role="tabpanel">
+      <div class="card-body">
+        <pre>{{.Inner}}</pre>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<script>
+  /* global ABCJS */
+
+  ABCJS.renderAbc('abcjs-src-{{$id}}', '{{.Inner}}', {}, {
+    'responsive': 'resize',
+    'add_classes': true
+  }, {
+  })
+</script>

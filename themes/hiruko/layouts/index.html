@@ -1,0 +1,33 @@
+{{ partial "header.html" . }}
+<div class="wrap bg-white">
+	{{ partial "navbar.html" . }}
+	<main class="hiruko-container bg-white">
+		<div class="articles text-dark">
+		{{- $paginator := .Paginate (where .RegularPages "Params.type" "post") .Site.Params.Paginate }}
+		{{- range $page := $paginator.Pages }}
+			<article class="post-block">
+				<h2 class="post-title">
+					<a href="{{ .Permalink }}" class="post-link text-dark">{{ $page.Title }}</a>
+				</h2>
+				<div class="post-info">{{ $page.Date.Format "2006年01月02日" }}</div>
+				<div class="post-entry">{{ .Summary }}</div>
+				<div class="post-meta">
+					<a href="{{ .Permalink }}" class="article-more"><i class="fa fa-file-text-o" aria-hidden="true"></i>点击阅读更多</a>
+				{{ with $page.Params.tags }}
+					<div class="post-tags-box">
+						{{ range $id, $name := $page.Params.tags }}
+						{{ if $id }},{{ end }}
+						<a class="tag-link" href="/tags/{{ $name | urlize }}">{{ $name }}</a>
+						{{ end }}
+					</div>
+				{{ end }}
+				</div>
+			</article>
+		{{- end }}
+		</div>
+		{{ partial "pagination.html" . }}
+	</main>
+</div>
+
+{{ partial "footer.html" . }}
+{{ partial "after-footer.html" . }}
