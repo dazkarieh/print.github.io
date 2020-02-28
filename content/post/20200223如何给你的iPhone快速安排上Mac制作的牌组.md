@@ -9,7 +9,8 @@ codes = ["bash"]
 douban = false
 mathjax = false
 slug = "how to import anki deck from imac to iphone quickly"
-
+comments = true
+keywords = ["武汉肺炎","anki"]
 +++
 多少年以后，国人回忆起2020这个春节的时候，一定会费解于「停课不停学」、「用书香守护希望」等奇异口号。
 
@@ -68,13 +69,13 @@ Alias hs ='python -m http.server'
 
 
 
-1. 在pathfinder中定位要作为分享目录的文件夹
+**壹**：在pathfinder中定位要作为分享目录的文件夹
 
-2. 用alfred的[alfred-terminalfinder](https://github.com/LeEnno/alfred-terminalfinder)定位于iterms
+**贰**：用alfred的[alfred-terminalfinder](https://github.com/LeEnno/alfred-terminalfinder)定位于iterms
 
-3. 输入`hs`快速打开http server功能。
+**叁**：输入`hs`快速打开http server功能。
 
-4. 在浏览器端输入http://0.0.0.0:8000 即可访问当前目录下所有内容，也可以自定义端口号：
+**肆**：在浏览器端输入http://0.0.0.0:8000 即可访问当前目录下所有内容，也可以自定义端口号：
 
 ```bash
 python -m http.server  8888
@@ -82,9 +83,11 @@ python -m http.server  8888
 
 用http://0.0.0.0:8888 即可访问当前目录下的文件清单。
 
-5. 复制文件链接，把`0.0.0.0`改成PC的本地IP，如`192.168.1.21`之类。于是得到一个完整的URL。
-6. 通过mac与iOS设备之前的Handoff 功能传递URL，在anki下载链接中粘贴导入。
-7. 关闭服务器也很简易：
+**伍**：复制文件链接，把`0.0.0.0`改成PC的本地IP，如`192.168.1.21`之类。于是得到一个完整的URL。
+
+**陆**：通过mac与iOS设备之前的Handoff 功能传递URL，在anki下载链接中粘贴导入。
+
+**染**：关闭服务器也很简易：
 
 在终端界面中按下 `ctrl+c` 停止
 
