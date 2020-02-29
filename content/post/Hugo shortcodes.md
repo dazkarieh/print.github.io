@@ -99,6 +99,16 @@ slug = "/several hugo shortcoeds samples/"
 
 效果如下（需要翻墙查看）：
 
+## imgur
+
+以`https://imgur.com/a/ZT8fImy`为例
+
+```bash
+{{</* imgur id="ZT8fImy" */>}}
+```
+
+{{< imgur id="ZT8fImy" >}}
+
 
 ## 简易版文本居中
 ```bash
