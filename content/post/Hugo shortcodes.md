@@ -65,10 +65,12 @@ slug = "/several hugo shortcoeds samples/"
 ## wikipedia
 
 ```bash
-{{</* wp tag="膜蛤文化" lang="zh" title="神秘的膜蛤文化" */>}}
+{{</* wp tag="膜蛤文化" lang="zh" title="《神秘的膜蛤文化》" */>}}
+或者简化版
+{{</* wp 膜蛤文化 "《神秘的膜蛤文化》" zh */>}}
 ```
 
-{{< wp tag="膜蛤文化" lang="zh" title="神秘的膜蛤文化" >}}
+{{< wp tag="膜蛤文化" lang="zh" title="《神秘的膜蛤文化》" >}}
 
 ## 豆瓣
 
