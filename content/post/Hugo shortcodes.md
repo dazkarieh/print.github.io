@@ -101,7 +101,7 @@ slug = "/several hugo shortcoeds samples/"
 
 ## imgur
 
-以`https://imgur.com/a/ZT8fImy`为例
+为了避免特定的敏感图片被国内ISP审察，我们可以将imgur作为上传图床，随后引用置入帖子中，以`https://imgur.com/a/ZT8fImy`为例
 
 ```bash
 {{</* imgur id="ZT8fImy" */>}}
