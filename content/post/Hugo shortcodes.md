@@ -62,6 +62,16 @@ slug = "/several hugo shortcoeds samples/"
 {{</* instagram BWNjjyYFxVx hidecaption */>}}
 ```
 
+## bilibili
+
+耐心等候，B站的加载速度实在龟速。
+
+```bash
+{{</* bilibili aid=“60445142” */>}}
+```
+
+{{< bilibili aid=“60445142” >}}
+
 ## 豆瓣
 
 ```bash
