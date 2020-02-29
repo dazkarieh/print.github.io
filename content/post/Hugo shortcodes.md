@@ -62,15 +62,13 @@ slug = "/several hugo shortcoeds samples/"
 {{</* instagram BWNjjyYFxVx hidecaption */>}}
 ```
 
-## bilibili
-
-耐心等候，B站的加载速度实在龟速。
+## wikipedia
 
 ```bash
-{{</* bilibili aid="61016858” */>}}
+{{</* wp tag="膜蛤文化" lang="zh" title="神秘的膜蛤文化" */>}}
 ```
 
-{{< bilibili aid="61016858” >}}
+{{< wp tag="膜蛤文化" lang="zh" title="神秘的膜蛤文化" >}}
 
 ## 豆瓣
 
