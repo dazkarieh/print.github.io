@@ -67,10 +67,10 @@ slug = "/several hugo shortcoeds samples/"
 耐心等候，B站的加载速度实在龟速。
 
 ```bash
-{{</* bilibili aid=“60445142” */>}}
+{{</* bilibili aid=“61016858” */>}}
 ```
 
-{{< bilibili aid=“60445142” >}}
+{{< bilibili aid=“61016858” >}}
 
 ## 豆瓣
 
