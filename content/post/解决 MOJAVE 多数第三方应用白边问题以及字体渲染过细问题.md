@@ -21,6 +21,7 @@ defaults write -app 应用名 NSRequiresAquaSystemAppearance -bool No
 
 注意：<u>该指令相当于让应用强行使用深色模式 UI，如果应用 /系统本身是浅色的，就没必要执行这个指令</u>
 
+<!--more-->
 
 ## 二、解决字体渲染过细解决方案
 打开终端，输入：
