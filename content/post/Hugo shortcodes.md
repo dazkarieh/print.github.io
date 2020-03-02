@@ -62,6 +62,14 @@ slug = "/several hugo shortcoeds samples/"
 {{</* instagram BWNjjyYFxVx hidecaption */>}}
 ```
 
+## bilibili
+
+```
+{{</* bilibili aid="63014656" */>}}
+```
+
+{{< bilibili aid="63014656" >}}
+
 ## wikipedia
 
 ```bash
