@@ -4,6 +4,7 @@
     "MetaDataFormat":"json",
     "title": "消夏錄",
     "theme": "hiruko",
+   "markup": {
     "blackfriday": {
         "hrefTargetBlank":true,
         "nofollowLinks":true,
@@ -32,6 +33,7 @@
             "unsafe": true,
             "xHTML": false
         }
+     }
     },
     "enableEmoji":"true",
     "enableRobotsTXT":"true",
