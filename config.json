@@ -4,36 +4,17 @@
     "MetaDataFormat":"json",
     "title": "消夏錄",
     "theme": "hiruko",
-   "markup": {
-    "blackfriday": {
-        "hrefTargetBlank":true,
-        "nofollowLinks":true,
-        "smartypants":false,
-        "hardLineBreak":true,
-        "plainIDAnchors":false,
-        "noreferrerLinks":true
-    },
-    "goldmark": {
-        "extensions": {
-            "definitionList": true,
-            "footnote": true,
-            "linkify": true,
-            "strikethrough": true,
-            "table": true,
-            "taskList": true,
-            "typographer": true
-         },
-        "parser": {
-            "attribute": true,
-            "autoHeadingID": true,
-            "autoHeadingIDType": "github"
-         },
-        "renderer": {
-            "hardWraps": false,
-            "unsafe": true,
-            "xHTML": false
+    "markup": {
+       "blackfriday": {
+          "hrefTargetBlank":true,
+          "nofollowLinks":true,
+          "smartypants":false,
+          "hardLineBreak":true,
+          "taskLists": true,
+          "plainIDAnchors":false,
+          "latexDashes": true,
+          "noreferrerLinks":true
         }
-     }
     },
     "enableEmoji":"true",
     "enableRobotsTXT":"true",
