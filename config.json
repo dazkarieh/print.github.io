@@ -5,12 +5,33 @@
     "title": "消夏錄",
     "theme": "hiruko",
     "blackfriday": {
-    	"hrefTargetBlank":true,
-    	"nofollowLinks":true,
-    	"smartypants":false,
+        "hrefTargetBlank":true,
+        "nofollowLinks":true,
+        "smartypants":false,
         "hardLineBreak":true,
-    	"plainIDAnchors":true,
-    	"noreferrerLinks":true
+        "plainIDAnchors":false,
+        "noreferrerLinks":true
+    },
+    "goldmark": {
+        "extensions": {
+            "definitionList": true,
+            "footnote": true,
+            "linkify": true,
+            "strikethrough": true,
+            "table": true,
+            "taskList": true,
+            "typographer": true
+         },
+        "parser": {
+            "attribute": true,
+            "autoHeadingID": true,
+            "autoHeadingIDType": "github"
+         },
+        "renderer": {
+            "hardWraps": false,
+            "unsafe": true,
+            "xHTML": false
+        }
     },
     "enableEmoji":"true",
     "enableRobotsTXT":"true",
