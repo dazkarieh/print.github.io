@@ -2,5 +2,9 @@
 User-agent: Googlebot
 Disallow: /tags
 Disallow: /categories
+Disallow: /faq
+Disallow: /about
 Disallow: /page
+Disallow: /contact
+Disallow: /archives
 Sitemap: https://tin6.com/sitemap.xml
