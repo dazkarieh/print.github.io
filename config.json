@@ -21,7 +21,7 @@
             "autoHeadingIDType": "github"
          },
          "renderer": {
-            "hardWraps": false,
+            "hardWraps": true,
             "unsafe": true,
             "xHTML": false
          }
