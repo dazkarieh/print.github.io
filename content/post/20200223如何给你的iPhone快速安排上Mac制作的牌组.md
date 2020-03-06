@@ -97,4 +97,5 @@ python -m http.server  8888
 [^2]: [怎么获取anki中的分享牌组，怎么下载到anki呢](https://www.zhihu.com/question/331439631/answer/740820205)
 [^3]: [利用群晖Synology进行Anki同步](https://zhuanlan.zhihu.com/p/70269217)
 [^4]: [http.server — HTTP servers](https://docs.python.org/3.0/library/http.server.html)
+
 [l1]: https://github.com/TheWaWaR/simple-http-server

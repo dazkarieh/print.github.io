@@ -1,7 +1,16 @@
-{{ define "main"}}
-    <main id="main">
-      <div>
-       <h1 id="title"><a href="{{ "/" | relURL }}"> 🎉客官，这边请🎉</a></h1>
-      </div>
-    </main>
-{{ end }}
+{{ partial "header" . }}
+
+<main id='main' class='main'>
+  <div class='entry'>
+    <div class='entry-content' align="center">
+        <h1 style="text-align: center">迷路了吗？……</h1><br>
+          <img src='/img/4041.png' alt='No can do friend ...'/><br><br><br><br>
+        <h2 style="text-align: center">
+            <a href="{{ "/" | relURL }}">-->>客官，这边有请<<--</a>
+        </h2>
+    </div>
+  </div>
+
+</main>
+
+{{ partial "footer" . }}
