@@ -1,16 +1,15 @@
 {{ partial "header" . }}
-
-<main id='main' class='main'>
-  <div class='entry'>
-    <div class='entry-content' align="center">
-        <h1 style="text-align: center">迷路了吗？……</h1><br>
-          <img src='/img/4041.png' alt='No can do friend ...'/><br><br><br><br>
-        <h2 style="text-align: center">
-            <a href="{{ "/" | relURL }}">-->>客官，这边有请<<--</a>
-        </h2>
+<div class="maincontainer panda-bg" align="center">
+  <div class="row">
+    <div class="col-md-12 clearfix">
+      <img src="/img/panda_404.png" alt="" class="img-responsive panda-image">
+      <h2 class="panda-title text-center">Ooooops, The very essence of romance is uncertainty</h2>
+      <p class="panda-message text-center">Looks like angry panda has eaten the page you are looking for</p>
+        <h1 style="text-align: center">
+            <a href="{{ "/" | relURL }}">-->> May surprise you here <<--</a>
+        </h1>
+    </div>
     </div>
   </div>
-
-</main>
-
+</div>
 {{ partial "footer" . }}
