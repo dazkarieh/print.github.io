@@ -1097,3 +1097,24 @@ transition: all .3s;
 .upright {
   text-orientation: sideways;
 }
+
+
+/* Panda 404 CSS*/
+.panda-bg {
+  background-color: #3A73B9;
+  padding-bottom: 30px;
+}
+.panda-image {
+  padding-left: 38%;
+}
+.panda-title {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 80px;
+  line-height: 120%;
+}
+.panda-message {
+  color: #fff;
+  font-size: 20px;
+  line-height: 120%;
+}
