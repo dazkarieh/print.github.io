@@ -38,8 +38,14 @@
          "tabWidth": 4
       }
     },
+    "sitemap": {
+      "changefreq": "weekly",
+      "filename": "sitemap.xml",
+      "priority": 0.5
+    },
     "enableEmoji":"true",
     "enableRobotsTXT":"true",
+    "rssLimit":10,
     "relativeurls":"true",
     "canonifyURLs":"true",
  	"hasCJKLanguage":"true",
@@ -71,7 +77,7 @@
             [ "摄影作品", "https://icrtt.com", "_blank"],
             [ "标签墙", "/tags"],
             [ "作者简介",   "/about" ],
-            [ "RSS订阅",     "/index.xml" ]
+            [ "Feed订阅",     "/feed.xml" ]
         ],
         "AboutMe": {
             "Motto": "Everyone is a genius at being themselves.",
@@ -173,10 +179,32 @@
             }
         }
     },
+"disableKinds":"RSS",
+"mediaTypes": {
+    "application/atom+xml": {
+      "suffixes": ["xml"]
+    }
+  },
+  "outputFormats": {
+    "ATOM": {
+      "MediaType": "application/atom+xml",
+      "BaseName": "feed",
+      "Rel": "alternate"
+    },
+  "outputFormats": {
+    "RSS": {
+      "MediaType": "application/rss+xml",
+      "BaseName": "rss",
+      "Rel": "alternate"
+    }
+  }
+
+},
     "outputs": {
         "home": [
             "HTML",
-            "RSS"
+            "RSS",
+            "ATOM"
         ]
     }
 }
