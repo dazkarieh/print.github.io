@@ -1367,6 +1367,7 @@ box-shadow: 0 0 2px 2px rgba(230, 234, 242, 0.15);
 
 .post-entry a[href*="//"]:not([href$=".jpg"]):not([href$=".png"]) {
     background: url(/img/external-link-blue.svg) center right no-repeat;
+  /*  background-size: 12px 12px; */
     padding-right: 19px;
     padding-top: 5px;
 }
@@ -2626,6 +2627,7 @@ cursor: pointer;
 
 /******* Search Box****/
 
+
 /* Panda 404 CSS*/
 .panda-bg {
   background-color: #3A73B9;
@@ -2646,3 +2648,52 @@ cursor: pointer;
   line-height: 120%;
 }
 
+
+/* dark mode CSS*/
+@media (prefers-color-scheme: dark) {
+
+.hiruko-container {
+   background-color: #252525!important;
+}
+
+.post-item-link {
+  filter: invert(100%)!important;
+}
+
+.pagination {
+  filter: invert(100%)!important;
+}
+
+h3 { filter: invert(100%); }
+
+.logo-normal {
+  filter: invert(100%)!important;
+}
+
+.bg-white {
+  background-color: #252525!important;
+  }
+
+.archive  {
+  filter: invert(100%)!important;
+}
+
+.about-me-text {
+  filter: invert(100%)!important;
+}
+
+
+.text-dark {
+    color: #bdcadb!important;
+}
+
+.body_OBG {
+  background-color: rgb(60, 63, 70)!important;
+}
+
+.zoomlink:hover {
+    color:#bfc257;
+    cursor: pointer;
+    }
+
+}
