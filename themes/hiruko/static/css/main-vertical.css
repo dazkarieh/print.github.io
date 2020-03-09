@@ -1172,6 +1172,10 @@ transition: all .3s;
   filter: invert(100%)!important;
 }
 
+.post-item span{
+  filter: invert(100%)!important;
+}
+
 .pagination {
   filter: invert(100%)!important;
 }
