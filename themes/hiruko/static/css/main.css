@@ -2652,6 +2652,15 @@ cursor: pointer;
 /* dark mode CSS*/
 @media (prefers-color-scheme: dark) {
 
+.post-entry code {
+  margin: 0px 0px;
+}
+
+.post-entry p code {
+background-color: #758541;
+}
+
+
 .hiruko-container {
    background-color: #252525!important;
 }

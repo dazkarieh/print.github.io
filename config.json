@@ -139,6 +139,7 @@
                 "Path": "//cdn.staticfile.org",
                 "Version": "9.15.6",
                 "Style": "atom-one-light" ,
+                "DarkStyle": "atom-one-dark" ,
                 "//": "推荐atom-one-light/obsidian/railscasts/monokai/github/atom-one-dark-reasonable等"
             },
             "HighLightNum": {

@@ -1168,6 +1168,14 @@ transition: all .3s;
    background-color: #252525!important;
 }
 
+.post-entry code {
+  margin: 0px 0px;
+}
+
+.post-entry p code {
+background-color: #758541;
+}
+
 .post-item-link {
   filter: invert(100%)!important;
 }

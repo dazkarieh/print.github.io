@@ -61,6 +61,8 @@
 
 {{- if isset .Params "codes" }}
 <link rel="stylesheet" href="{{ $.Site.Params.CDN.HighLight.Path }}/highlight.js/{{ $.Site.Params.CDN.HighLight.Version }}/styles/{{ $.Site.Params.CDN.HighLight.Style }}.min.css"/>
+<link rel="stylesheet" href="{{ $.Site.Params.CDN.HighLight.Path }}/highlight.js/{{ $.Site.Params.CDN.HighLight.Version }}/styles/{{ $.Site.Params.CDN.HighLight.DarkStyle }}.min.css" media="screen and (prefers-color-scheme: dark)"/>
+
 <script src="{{ $.Site.Params.CDN.HighLight.Path }}/highlight.js/{{ $.Site.Params.CDN.HighLight.Version }}/highlight.min.js"></script>
 <script src="{{ $.Site.Params.CDN.HighLightNum.Path }}/highlightjs-line-numbers.js/{{ $.Site.Params.CDN.HighLightNum.Version }}/highlightjs-line-numbers.min.js"></script>
 {{- range .Params.codes }}
