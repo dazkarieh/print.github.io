@@ -1639,7 +1639,7 @@ font-family: 'Palatino Linotype','Book Antiqua',Palatino,STKaiti,KaiTi,'楷体',
 
 .post-entry ol li {
   position: relative;
-  padding-left: 40px;
+  padding-left: 7px;
   min-height: 40px;
 }
 
@@ -2660,6 +2660,10 @@ cursor: pointer;
 background-color: #758541;
 }
 
+
+.post-entry h2::before {
+background-color: #f1f1f4;
+}
 
 .hiruko-container {
    background-color: #252525!important;
