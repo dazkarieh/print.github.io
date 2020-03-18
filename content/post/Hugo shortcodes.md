@@ -436,7 +436,7 @@ your text
 {{% /notice %}}
 
 
-## gallery slider
+## gallery slider（目前仍未适配手机端）
 
 ### 配置参数
 | 变量 | 默认 | 说明 |

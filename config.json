@@ -94,7 +94,7 @@
         },
         "Copyright": {
             "Name": "Ian",
-            "From": "2015",
+            "From": "2007",
             "To": "2020"
         },
         "Valine": {
@@ -109,7 +109,7 @@
         "CDN": {
             "JQuery": {
                 "Path": "/js/libs",
-                "Version": "3.3.1"
+                "Version": "3.4.1"
             },
             "JQueryMouseWheel": {
                 "Path": "/js/libs",

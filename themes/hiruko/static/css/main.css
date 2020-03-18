@@ -1210,6 +1210,10 @@ section.attachments.grey .attachments-files {
     text-indent: 0em;
 }
 
+.footnotes p{
+  text-indent: 0!important;
+}
+
 .post-entry img {
     display: block;
     box-shadow: 0 0 10px #555;
