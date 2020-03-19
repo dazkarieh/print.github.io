@@ -9,8 +9,8 @@ aplayer = false
 mathjax = false
 slug = "7 steps towards the labyrinth"
 keywords = ["歌单","labyrinth"]
+tags = ["音乐"]
 +++
-
 {{< img src="https://ian2.oss-cn-hangzhou.aliyuncs.com/clt6/20200318175040.png" >}}
 
 <!--more-->

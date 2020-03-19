@@ -8,7 +8,7 @@ reward = true
 aplayer = false
 mathjax = false
 slug = "Life in mono"
-keywords = ["shoegazing","mono"]
+keywords = ["shoegazing","mono","音乐"]
 +++
 
 {{< img src="https://ian2.oss-cn-hangzhou.aliyuncs.com/clt6/20200318185628.png" >}}
