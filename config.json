@@ -10,6 +10,7 @@
             "definitionList": true,
             "footnote": true,
             "linkify": true,
+            "enableEmoji": true,
             "strikethrough": true,
             "table": true,
             "taskList": true,
