@@ -9,7 +9,7 @@ codes = ["bash"]
 slug = "How to Escape Hugo shortcodes within Hugo markdown"
 keywords = ["markdown","hugo","Shortcodes"]
 +++
-在之前的《[HUGO如何默认以新建标签方式打开外链]({{< relref "HUGO如何默认以新建标签方式打开外链.md" >}})》文末的a -blank简码展示模块，我遇到了有一个markdown的实际问题，我只是想在hugo mardown（.md）文件里展示代码，而非运行hugo的简码(Shortcodes)。那该如何写呢？
+在之前的《[HUGO如何默认以新建标签方式打开外链]({{< relref "20190225HUGO如何默认以新建标签方式打开外链.md" >}})》文末的a -blank简码展示模块，我遇到了有一个markdown的实际问题，我只是想在hugo mardown（.md）文件里展示代码，而非运行hugo的简码(Shortcodes)。那该如何写呢？
 <!--more-->
  对于 `{< myshortcode >}` 这样的简码，如何找到一个办法阻止转义，对于大部分markdown解释器，反斜杠`\`似乎不起作用，显示的结果只能是
 ```bash
