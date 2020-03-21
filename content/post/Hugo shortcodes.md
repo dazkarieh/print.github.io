@@ -211,10 +211,10 @@ slug = "/several hugo shortcoeds samples/"
 [Hugo Math Sample]({{</* ref "post/Hugo Math Sample.md" */>}})
 [A publication]({{</* ref "publication/hi.md" */>}})
 [A project]({{</* ref "project/hi.md" */>}})
-[mathjax组表示]({{</* relref "mathjax samples for hugo.md#组(Group)" */>}})
+[mathjax组表示]({{</* relref "20190206mathjax samples for hugo.md#组(Group)" */>}})
 ```
 
-[mathjax组表示]({{< relref "mathjax samples for hugo.md#实验6" >}})
+[mathjax组表示]({{< relref "20190206mathjax samples for hugo.md#实验6" >}})
 
 ## 站内静态文件链接（staticref.html）
 为站内文件创建一个链接,比如PDF文档, 首先需要新建一个文件目录如： `static/files/` ，接下来以如下形式展现:
