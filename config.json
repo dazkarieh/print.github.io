@@ -44,6 +44,36 @@
       "filename": "sitemap.xml",
       "priority": 0.5
     },
+    "minify": {
+      "disableCSS": false,
+      "disableHTML": false,
+      "disableJS": false,
+      "disableJSON": false,
+      "disableSVG": false,
+      "disableXML": false,
+      "minifyOutput": false,
+      "tdewolff": {
+         "css": {
+            "decimals": -1,
+            "keepCSS2": true
+         },
+         "html": {
+            "keepConditionalComments": true,
+            "keepDefaultAttrVals": true,
+            "keepDocumentTags": true,
+            "keepEndTags": true,
+            "keepWhitespace": false
+         },
+         "js": {},
+         "json": {},
+         "svg": {
+            "decimals": -1
+         },
+         "xml": {
+            "keepWhitespace": false
+         }
+      }
+   },
     "enableEmoji":"true",
     "enableRobotsTXT":"true",
     "rssLimit":10,
