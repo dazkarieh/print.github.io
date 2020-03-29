@@ -23,9 +23,9 @@ slug = "mathjax samples for hugo"
 
 其中:
 
-1.  `begin`和`end`表示公式的起始
-2.  `\\`符号表示换行
-3.  `&`表示对齐
+*  `begin`和`end`表示公式的起始
+*  `\\`符号表示换行
+*  `&`表示对齐
 
 结果渲染到html页面之后结果是这样的:
 {{<img src="https://ian2.oss-cn-hangzhou.aliyuncs.com/clt6/20190219093546.png" alt="">}}
@@ -35,8 +35,8 @@ slug = "mathjax samples for hugo"
 
 发现两个问题:
 
-1.  `&`符号被转义成了`&amp;`
-2.  双反斜杠`\\`被转义成功了`\`
+* `&`符号被转义成了`&amp;`
+* 双反斜杠`\\`被转义成功了`\`
 
 这就是公式没换行的原因，肯定是`marked.js`里面做了处理，不过仔细看`Mathjax`脚本的配置项中有一项为`processEscapes: true`，说明`MathJax`是支持转义符号的，所以类似`&amp;`是不需要额外处理的。
 
@@ -129,7 +129,7 @@ Each line should end with \, and should contain an ampersand at the point to ali
 比如多行公式推导中常用的等号对齐
 begin{split} 表示开始多行公式，end{split}表示结束；公式中用`\\`(hugo用 \cr )表示回车到下一行，&表示对齐的位置。
 
-   $$
+$$
    \begin{equation}
    \begin{split}
    \frac{\partial^2 f}{\partial{x^2}} &= \frac{\partial(\Delta_x f(i,j))}{\partial x} = \frac{\partial(f(i+1,j)-f(i,j))}{\partial x}  \cr
@@ -138,7 +138,7 @@ begin{split} 表示开始多行公式，end{split}表示结束；公式中用`\\
    \end{split}
    \nonumber
    \end{equation}
-   $$
+$$
 
 ## MathJax公式手动编号
 
@@ -154,9 +154,9 @@ $$\sum_{i=0}^n F_i \cdot \phi (H, p_i) \tag{1.2.3}$$
 
 不加`\begin{equation} \end{equation}`也可以，例如：
 
- $$
+$$
  \beta^*(D) = \mathop{argmin} \limits_{\beta} \lambda {||\beta||}^2  \tag{我的公式3}
- $$
+$$
 
 行内公式加`\tag{}`后会自动成为行间公式，
 
