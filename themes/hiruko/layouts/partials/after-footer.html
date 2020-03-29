@@ -14,7 +14,7 @@
     o.src = u;
     if (c) { o.addEventListener('load', function (e) { c(e); }); }
     s.parentNode.insertBefore(o, s);
-})("{{ $.Site.Params.CDN.Pangu.Path }}/pangu/{{ $.Site.Params.CDN.Pangu.Version }}/pangu.min.js", function () {
+})("{{ $.Site.Params.CDN.Pangu.Path }}/npm/pangu@{{ $.Site.Params.CDN.Pangu.Version }}/dist/browser/pangu.min.js", function () {
     pangu.spacingPage();
 });
 </script>

@@ -187,7 +187,7 @@
                 "Version": "4.7.0"
             },
             "Pangu": {
-                "Path": "/js/libs",
+                "Path": "//cdn.jsdelivr.net",
                 "Version": "4.0.7",
                 "//": "无cdn.static.org镜像"
             },
