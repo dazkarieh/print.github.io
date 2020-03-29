@@ -189,7 +189,7 @@
             "Pangu": {
                 "Path": "//cdn.jsdelivr.net",
                 "Version": "4.0.7",
-                "//": "无cdn.static.org镜像"
+                "//": "无cdn.static.org镜像，本地路径需重新设置"
             },
             "videojs": {
                 "Path": "/js/libs",
@@ -200,8 +200,9 @@
                 "Version": "4.1.3"
             },
             "vanillaback2top":{
-                "Path": "/js/libs",
-                "Version": "7.2.1"
+                "Path": "//cdn.jsdelivr.net",
+                "Version": "7.2.1",
+                 "//": "无cdn.static.org镜像，本地路径需重新设置"
             },
             "Aplayer": {
                 "Path": "/js/libs",
