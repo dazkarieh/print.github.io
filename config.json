@@ -198,7 +198,7 @@
                 "Version": "4.1.3"
             },
             "vanillaback2top":{
-                "Path": "//cdn.staticfile.org",
+                "Path": "/js/libs",
                 "Version": "7.2.1"
             },
             "Aplayer": {
