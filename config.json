@@ -174,9 +174,8 @@
                 "//": "推荐atom-one-light/obsidian/railscasts/monokai/github/atom-one-dark-reasonable等"
             },
             "HighLightNum": {
-                "Path": "/js/libs",
-                "Version": "2.7.0",
-                 "//": "无cdn.static.org镜像"
+                "Path": "//cdn.staticfile.org",
+                "Version": "2.7.0"
             },
             "MathJax": {
                 "Path": "//cdn.staticfile.org",
