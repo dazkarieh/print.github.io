@@ -140,7 +140,7 @@
         "CDN": {
             "JQuery": {
                 "Path": "//cdn.staticfile.org",
-                "Version": "3.4.1"
+                "Version": "2.24"
             },
             "JQueryMouseWheel": {
                 "Path": "/js/libs",
