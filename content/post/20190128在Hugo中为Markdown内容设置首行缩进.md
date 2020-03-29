@@ -4,7 +4,7 @@ date= "2019-01-28T13:39:35+08:00"
 toc = false
 tags = ["hugo","Front matter"]
 categories = ["前端"]
-codes = ["css","html"]
+codes = ["css","htmlbars"]
 draft= false
 +++
 
@@ -41,7 +41,7 @@ draft= false
 
 对[Hyde](https://themes.gohugo.io/hyde/)来说，其正文内容，默认是以`post`包裹的。
 
-```html
+```htmlbars
 <div class="post">
     <h1>{{ .Title }}</h1>
     <span class="post-date">{{ .Date.Format "Mon, Jan 2, 2006" }}</span>
