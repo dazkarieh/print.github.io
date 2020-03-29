@@ -5,7 +5,7 @@ toc = true
 mathjax = false
 tags = ["unix","dos"]
 categories = ["技术"]
-codes = ["bash"]
+codes = ["shell"]
 slug = "how to solve the 'Command Not Found' when runing sh file"
 keywords = ["hugo","unix"]
 +++
@@ -13,7 +13,7 @@ keywords = ["hugo","unix"]
 ## 情景回顾
 在win10系统里写了一个自动部署调试的sh脚本，拷贝到mac的hugo目录下，试图运行一下，发现报`command not found`的错误，即便通过`chmod`增大权限也无济于事：
 
-```bash
+```shell
 $:hugo root# chmod -R 777 *
 $:hugo root# ./server.sh
 : command not found: hugo server
@@ -28,7 +28,7 @@ mac下执行.sh脚本错误很多情况只是.sh脚本在windows系统与Unix不
 转行文件的编码格式，具体操作如下：
 
 ### 确保当前用户有足够权限
-```bash
+```shell
 $:hugo root# chmod a+x server.sh
 ```
 
@@ -36,13 +36,13 @@ $:hugo root# chmod a+x server.sh
 
 （1）使用vi工具
 
-```bash
+```shell
 $:hugo root# vi server.sh
 ```
 
 （2）利用如下命令查看文件格式
 
-```bash
+```shell
  :set ff
 or
  :set fileformat
@@ -53,7 +53,7 @@ or
 
 （3） 利用如下命令修改文件格式
 
-```bash
+```shell
 :set ff=unix
 or
 :set fileformat=unix
@@ -63,7 +63,7 @@ or
 
 ### 重新执行脚本
 
-```bash
+```shell
 $:hugo root# ./server.sh
                    | EN
 +------------------+-----+
