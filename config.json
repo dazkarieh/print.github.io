@@ -168,26 +168,28 @@
             },
             "HighLight": {
                 "Path": "//cdn.staticfile.org",
-                "Version": "9.15.6",
+                "Version": "9.18.1",
                 "Style": "atom-one-light" ,
                 "DarkStyle": "atom-one-dark" ,
                 "//": "推荐atom-one-light/obsidian/railscasts/monokai/github/atom-one-dark-reasonable等"
             },
             "HighLightNum": {
-                "Path": "//cdn.staticfile.org",
-                "Version": "2.7.0"
+                "Path": "/js/libs",
+                "Version": "2.7.0",
+                 "//": "无cdn.static.org镜像"
             },
             "MathJax": {
                 "Path": "//cdn.staticfile.org",
-                "Version": "2.7.5"
+                "Version": "3.0.1"
             },
             "FontAwesome": {
                 "Path": "//cdn.staticfile.org",
                 "Version": "4.7.0"
             },
             "Pangu": {
-                "Path": "//cdn.staticfile.org",
-                "Version": "4.0.7"
+                "Path": "/js/libs",
+                "Version": "4.0.7",
+                "//": "无cdn.static.org镜像"
             },
             "videojs": {
                 "Path": "/js/libs",
@@ -202,12 +204,14 @@
                 "Version": "7.2.1"
             },
             "Aplayer": {
-                "Path": "//cdn.staticfile.org",
-                "Version": "1.10.1"
+                "Path": "/js/libs",
+                "Version": "1.10.1",
+                 "//": "无cdn.static.org镜像"
             },
             "Meting": {
-                "Path": "//cdn.staticfile.org",
-                "Version": "1.1.1"
+                "Path": "/js/libs",
+                "Version": "1.1.1",
+                "//": "无cdn.static.org镜像"
             }
         }
     },
