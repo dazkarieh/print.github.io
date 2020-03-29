@@ -11,6 +11,7 @@ mathjax = false
 slug = "how to import anki deck from imac to iphone quickly"
 comments = true
 keywords = ["武汉肺炎","anki"]
+tags = ["Anki"]
 +++
 这是一段“禁足”的春日，也是更适于“开卷”的三月。一册《政治秩序的起源：从前人类时代到法国大革命》成为了方舱医院里的“清流”，春日岂非读书日？
 

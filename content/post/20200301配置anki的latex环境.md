@@ -12,9 +12,8 @@ mathjax = false
 slug = "installation of anki-customized latex in macOS majove"
 comments = false
 keywords = ["LaTeX","BasicTeX","Anki"]
-
+tags = ["Anki"]
 +++
-
 TeX(读作/'laːtɛx/或 /'leɪtɛk/)是最强大的文字排版系统之一，它被广泛地用来制作幻灯片、论文甚至书籍(早年网红垠神当年即以TeXpert－Tex布道者、Tex专家的形象出道)。
 
 很多人认为TeX排版与Microsoft Office Word或类似软件的最大异同在于「非所见即所得」。实则不然，TeX的作者Donald E. Knuth曾形象地形容过 ：
