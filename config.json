@@ -164,7 +164,8 @@
             },
             "Mermaid":{
                  "Path": "/js/libs",
-                "Version": "8.4.8"
+                "Version": "8.4.8",
+                 "//": "有cdn.static.org镜像，注意大小写"
             },
             "HighLight": {
                 "Path": "//cdn.staticfile.org",
