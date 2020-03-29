@@ -147,11 +147,11 @@
                 "Version": "3.1.13"
             },
             "JQueryUI": {
-                "Path": "/js/libs",
+                "Path": "//cdn.staticfile.org",
                 "Version": "1.12.1"
             },
             "JQueryTocify": {
-                "Path": "/js/libs",
+                "Path": "//cdn.staticfile.org",
                 "Version": "1.9.0"
             },
             "FancyBox": {
@@ -174,7 +174,7 @@
                 "//": "推荐atom-one-light/obsidian/railscasts/monokai/github/atom-one-dark-reasonable等"
             },
             "HighLightNum": {
-                "Path": "/js/libs",
+                "Path": "//cdn.staticfile.org",
                 "Version": "2.7.0"
             },
             "MathJax": {
@@ -182,7 +182,7 @@
                 "Version": "2.7.5"
             },
             "FontAwesome": {
-                "Path": "/js/libs",
+                "Path": "//cdn.staticfile.org",
                 "Version": "4.7.0"
             },
             "Pangu": {
@@ -202,11 +202,11 @@
                 "Version": "7.2.1"
             },
             "Aplayer": {
-                "Path": "/js/libs",
+                "Path": "//cdn.staticfile.org",
                 "Version": "1.10.1"
             },
             "Meting": {
-                "Path": "/js/libs",
+                "Path": "//cdn.staticfile.org",
                 "Version": "1.1.1"
             }
         }
