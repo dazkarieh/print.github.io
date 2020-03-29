@@ -163,7 +163,7 @@
                 "Version": "3.4.1"
             },
             "Mermaid":{
-                 "Path": "//cdn.staticfile.org",
+                 "Path": "/js/libs",
                 "Version": "8.4.8"
             },
             "HighLight": {
