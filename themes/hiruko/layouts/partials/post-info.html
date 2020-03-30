@@ -8,7 +8,7 @@
 
 <i class="fa fa-calendar-plus-o"></i><span>&nbsp;{{ .Date.Format "2006年1月2日" }}&nbsp;&nbsp;&nbsp;</span>
 {{ if .Site.Params.readingtime }}
-<i class="fa fa-file-word-o"></i><span>&nbsp;约 {{ .WordCount }} 字&nbsp;&nbsp;&nbsp;</span><i class="fa fa-clock-o"></i><span>&nbsp;需时 {{ .ReadingTime }} 分钟&nbsp;&nbsp;&nbsp;</span>阅读量<span id="busuanzi_value_page_pv">&nbsp;&nbsp;&nbsp;</span>次&nbsp;
-{{ if .Site.Params.NightMode }}<i class="fa fa-toggle-off fa-lg zoomlink" id="toggle" onclick="toggleTheme()" ></i><span>夜读模式</span>{{ end }}{{ end }}
+<i class="fa fa-file-word-o"></i><span>&nbsp;约 {{ .WordCount }} 字&nbsp;&nbsp;&nbsp;</span><i class="fa fa-clock-o"></i><span>&nbsp;需时 {{ .ReadingTime }} 分钟&nbsp;&nbsp;&nbsp;</span><i class="fa fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv">&nbsp;&nbsp;&nbsp;</span>&nbsp;
+{{ if .Site.Params.NightMode }}<i class="fa fa-toggle-off fa-lg zoomlink" id="toggle" onclick="toggleTheme()" ></i><span>夜间模式</span>{{ end }}{{ end }}
 
 {{- end }}
