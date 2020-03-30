@@ -1,5 +1,5 @@
 +++
-title= "Mac下执行sh脚本显示Command Not Found如何解决"
+title= "修复Mac下执行sh脚本报错Command Not Found"
 date= 2019-02-20T22:44:14+08:00
 toc = true
 mathjax = false
