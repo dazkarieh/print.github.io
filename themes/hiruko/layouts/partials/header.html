@@ -34,6 +34,26 @@
 <script src="{{ $.Site.Params.CDN.photoswipe.Path }}/photoswipe/{{ $.Site.Params.CDN.photoswipe.Version }}/photoswipe-ui-default.min.js"  crossorigin="anonymous"></script>
 {{ end }}
 
+
+{{ if isset .Site.Params "busuanzi" }}
+<!-- 不蒜子 -->
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<!-- 不蒜子计数初始值纠正 -->
+<script>
+    $(document).ready(function() {
+        var int = setInterval(fixCount, 100);
+        var busuanziSiteOffset = {{ .Site.Params.busuanzi_site_offset }}
+        function fixCount() {
+            if ($("#busuanzi_container_site_pv").css("display") != "none") {
+                clearInterval(int);
+                $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + busuanziSiteOffset);
+            }
+        }
+    });
+</script>
+{{ end }}
+
+
 <!-- Video.js for post -->
 {{- if eq .Params.video true }}
 <script async src="{{ $.Site.Params.CDN.videojs.Path }}/video.js/{{ $.Site.Params.CDN.videojs.Version }}/video.min.js"></script>

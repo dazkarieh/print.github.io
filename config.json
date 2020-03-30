@@ -137,6 +137,10 @@
             "notify": "false",
             "avatar": "mm"
         },
+      "busuanzi": {
+          "enable": "true",
+          "busuanzi_site_offset": "100000"
+        },
         "CDN": {
             "JQuery": {
                 "Path": "//cdn.staticfile.org",
