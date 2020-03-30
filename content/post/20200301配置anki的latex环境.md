@@ -79,13 +79,13 @@ Generated file: /var/folders/x2/8dh4jx2j64n9tvvts_l2pqk00000gp/T/anki_temp/tmp.t
 或者
 
 ```bash
-sudo: tlmgr: command not found
+$ sudo: tlmgr: command not found
 ```
 
 **注意：**请在终端配置好tlmgr的路径
 
 ```bash
-sudo /usr/local/texlive/2019basic/bin/x86_64-darwin/tlmgr path add
+$ sudo /usr/local/texlive/2019basic/bin/x86_64-darwin/tlmgr path add
 ```
 然后，以防万一可在终端再升级下tlmgr版本
 
@@ -101,7 +101,7 @@ $ sudo tlmgr install dvipng
 上述命令可以归纳为一句：
 
 ```bash
-sudo tlmgr update --self && sudo tlmgr install dvipng
+$ sudo tlmgr update --self && sudo tlmgr install dvipng
 ```
 
 不出意外的话，打开Anki就可以看到你的TeX开始渲染输出了。

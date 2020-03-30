@@ -3,10 +3,8 @@ title= "如何给你的iPhone快速安排上Mac制作的anki牌组"
 date= 2020-02-22T09:42:20+08:00
 type = "post"
 categories = ["技术"]
-draft = false
 reward = true
-codes = ["bash"]
-douban = false
+codes = ["shell"]
 mathjax = false
 slug = "how to import anki deck from imac to iphone quickly"
 comments = true
@@ -20,7 +18,6 @@ tags = ["Anki"]
 不止甬城，举国上下闻疫而动、枕戈待旦。
 
 一场惨烈的瘟疫拉开全民荒诞运动的序幕，盘踞在乡镇上空硬核广播不断播撒土味Rap的恐怖情景将牢牢锁定在00、10后这一代人的记忆中。
-
 
 {{< img src="https://ian2.oss-cn-hangzhou.aliyuncs.com/clt6/20200228152921.png" >}}
 
@@ -59,21 +56,18 @@ itunes早在十年前就被我拉黑了，纵然只剩最后一个选项，我�
 
 为了快速操作该命令，我还在zsh设置了快捷键
 
-```bash
-vi ~/.zshrc
+```shell
+$ vi ~/.zshrc
 ```
 
-```bash
+```shell
 Alias hs ='python -m http.server'
 ```
 
 {{< img src="https://ian2.oss-cn-hangzhou.aliyuncs.com/clt6/20200223160453.png" >}}
 
 
-
 于是本诉求的workflow就变得异常简单（以文件管理器pathfinder为例）：
-
-
 
 **壹**：在pathfinder中定位要作为分享目录的文件夹
 
@@ -83,11 +77,11 @@ Alias hs ='python -m http.server'
 
 **肆**：在浏览器端输入http://0.0.0.0:8000 即可访问当前目录下所有内容，也可以自定义端口号：
 
-```bash
-python -m http.server  8888
+```shell
+$ python -m http.server  8888
 ```
 
-用http://0.0.0.0:8888 即可访问当前目录下的文件清单。
+用`http://0.0.0.0:8888` 即可访问当前目录下的文件清单。
 
 **伍**：复制文件链接，把`0.0.0.0`改成PC的本地IP，如`192.168.1.21`之类。于是得到一个完整的URL。
 
@@ -96,7 +90,6 @@ python -m http.server  8888
 **染**：关闭服务器也很简易：
 
 在终端界面中按下 `ctrl+c` 停止
-
 
 
 [^1]: [anki manual:iTunes Import/Export](https://apps.ankiweb.net/docs/am-manual.html#itunes-import/export)
