@@ -5,7 +5,7 @@ categories = ["前端"]
 toc = true
 tags = ["hugo","mathjax"]
 codes = ["bash","ini"]
-math = true
+mathjax = true
 description = "本文介绍Hugo中的公式的显示，以及如何修正转义错误。"
 slug = "/hugo-math-sample/"
 +++

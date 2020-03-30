@@ -5,11 +5,10 @@ tags = ["mathjax","hugo"]
 codes =["bash"]
 toc = true
 categories = ["前端"]
-math = true
+mathjax = true
 description = "mathjax 实例"
 slug = "mathjax samples for hugo"
 +++
-
 还是在`Hexo`中使用`Mathjax`写`Latex`公式的问题，在需要些多行的公式的时候，
 例如:
 
