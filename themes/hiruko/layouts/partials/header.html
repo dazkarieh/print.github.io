@@ -12,17 +12,17 @@
   <link rel="stylesheet" type="text/css" href="{{ $.Site.Params.CDN.Bootstrap.Path }}/twitter-bootstrap/{{ $.Site.Params.CDN.Bootstrap.Version }}/css/bootstrap.min.css" />
   <link rel="stylesheet" type="text/css" href="{{ $.Site.Params.CDN.FontAwesome.Path }}/font-awesome/{{ $.Site.Params.CDN.FontAwesome.Version }}/css/font-awesome.min.css" />
 
-  <!-- import google fonts through aliyun CDN -->
-  <link href="/css/google_fonts_import.css" rel="stylesheet">
+  <!-- import google fonts-->
+  <link href="/css/google_fonts_import.min.css" rel="stylesheet">
 
   {{- if eq .Params.image true }}
   <link rel="stylesheet" href="{{ $.Site.Params.CDN.FancyBox.Path }}/fancybox/{{ $.Site.Params.CDN.FancyBox.Version }}/jquery.fancybox.min.css" />
   {{- end }}
 
   {{- if eq .Params.vertical true }}
-  <link rel="stylesheet" href="/css/main-vertical.css">
+  <link rel="stylesheet" href="/css/main-vertical.min.css">
   {{- else }}
-  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/main.min.css">
   {{- end }}
 
   <script src="{{ $.Site.Params.CDN.JQuery.Path }}/jquery/{{ $.Site.Params.CDN.JQuery.Version }}/jquery.min.js"></script>
