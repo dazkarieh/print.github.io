@@ -9,7 +9,6 @@ mathjax = false
 slug = "Kiss o Kill"
 keywords = ["电影","阪本顺治","西川美和"]
 tags = ["电影"]
-
 +++
 好些片似良药，汤剂虽苦口，去心火，降邪气。胜过鹿茸、薏苡、人参的贵补。
 
@@ -20,8 +19,9 @@ tags = ["电影"]
 
 {{< img src="https://ian2.oss-cn-hangzhou.aliyuncs.com/clt6/20200321190158.png" >}}
 
-
-
-贾大夫profile（唔系如假包换o个假！）：
-
+<p>
+<section class="" style="margin-right: auto; margin-bottom: 2px; margin-left: auto; padding: 10px; line-height: 27px; color: #3e3e3e; font-family: Optima-Regular, PingFangTC-light; font-size: 16px; max-width: 92%; box-sizing: border-box; border-radius: 5px; word-wrap: break-word !important; border: 1px solid #e2561b;">
+贾大夫profile（唔系如假包换o个假！）：<br>
 海军医院资深老中医，逢单一三五坐堂汇诊，内科外科儿科妇科产科兽科，无科不通、无科不精，外包人流、放环，无痛无痕无副作用。其实最钟意开刀嘢，最憎写字，周日尽可能唔写字，去开刀嘢！
+</section>
+</p>

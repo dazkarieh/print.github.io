@@ -2,12 +2,13 @@
 title= "在Hugo中为Markdown内容设置首行缩进"
 date= "2019-01-28T13:39:35+08:00"
 toc = false
-tags = ["hugo","Front matter"]
+slug = "set text-indent for markdown article in hugo"
+tags = ["Hugo"]
+keywords = ["Hugo","Front matter"]
 categories = ["前端"]
 codes = ["css","htmlbars"]
 draft= false
 +++
-
 每个段落首行缩进两个字，是中文文章排版的默认规则。 本文以hugo主题为例，介绍如何在[Hugo](https://gohugo.io/)中实现这一点。
 
 ## 首行缩进

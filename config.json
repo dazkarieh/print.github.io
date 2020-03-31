@@ -139,7 +139,7 @@
         },
       "busuanzi": {
           "enable": "true",
-          "busuanzi_site_offset": "1000"
+          "busuanzi_site_offset": "80"
         },
         "CDN": {
             "JQuery": {
