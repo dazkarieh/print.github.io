@@ -138,8 +138,7 @@
             "avatar": "mm"
         },
       "busuanzi": {
-          "enable": "true",
-          "busuanzi_site_offset": "10"
+          "enable": "true"
         },
         "CDN": {
             "JQuery": {
