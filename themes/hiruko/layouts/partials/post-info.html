@@ -2,7 +2,7 @@
 
 <i class="fa fa-calendar-plus-o"></i><span>&nbsp;{{ index $.Site.Data.chinese_date.year (printf "%d" .Date.Year) }}{{ index $.Site.Data.chinese_date.month (printf "%d" .Date.Month) }}{{ index $.Site.Data.chinese_date.day (printf "%d" .Date.Day) }}&emsp;</span>
 
-{{ if .Site.Params.NightMode }}<i class="fa fa-toggle-off fa-rotate-90 fa-lg zoomlink" id="toggle" onclick="toggleTheme()" ></i>&nbsp;<span>夜读模式</span>{{ end }}
+{{ if .Site.Params.NightMode }}<i class="fa fa-toggle-off fa-rotate-90 fa-lg zoomlink" id="toggle" onclick="toggleTheme()" ></i>&nbsp;<span>深色阅读</span>{{ end }}
 
 {{- else }}
 
