@@ -6,7 +6,7 @@ categories = ["技术"]
 draft = false
 toc = false
 reward = true
-codes = ["bash","latex"]
+codes = ["bash","tex"]
 douban = false
 mathjax = false
 slug = "installation of anki-customized latex in macOS majove"
@@ -32,13 +32,13 @@ Mac环境下，Tex提供了各种安装版本。以Mactex为例，完整版体�
 
 - 正面为：
 
-```latex
+```tex
 [latex]$ x_i $[/latex]
 ```
 
 - 背面为：
 
-```latex
+```tex
 [latex]
 $$ \int_a^b f(x)$$\\
 
