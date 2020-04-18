@@ -18,6 +18,7 @@ comments: false
 
 ---
 >当我还年轻时，我身怀自由，但我并未看出它的存在，我有大把的时间，可我不懂得珍惜，我还拥有爱，但是从未真实地感受过它，我花了好几十年才明白这三者的真正意义，但现在，在我生命中的黄昏，这些认知逐渐转变成了幸福。爱，自由，时间,曾经随意丢弃的这些，原来正是驱使我前行的动力，而在这三者中，爱尤其宝贵。以此献给你和我们的孩子，以及我们的兄弟姐妹，还有这个赋予我们生命与好奇的广袤世界。
+>
 ><p align="right">———<b>《刺客信条:余烬》</b></p>
 
 **心水的漫画家**：釋英勝 、駕籠真太郎、谷口治郎、安彦良和、三枝义浩、富泽千夏、叶精作、北条司、五十岚大介、大友克洋、手琢治虫、永安巧、小谷憲一、赤石路代、北崎拓、古谷实、弘兼宪史、柴门文、星野之宣、齊藤隆夫、高桥留美子、藤原薰、星里望留、浦泽直树、古屋兎丸、贰瓶勉、鶴田謙二、岩明均、冨樫义博、落合尚之、福本伸行、山田章博、北川翔、松本大洋、高桥努、山本康人、国友泰士、吉原由起、波津彬子、熊仓隆敏、荻野真、浅野一二O、石森章太郎、田岛昭宇、山田章博、花輪和一
@@ -37,6 +38,6 @@ comments: false
 **喜欢的音乐类型**：
 Chicago Blues、Pop folk、Neo folk、Pagan folk、Psychedelic folk、Trash metal、Old-school metal、Vocal trance、Hard Bebop、Brit-pop、Shoegazing、Martial industry、Tribal
 
-**喜欢的音乐人**：小西康陽、B.B. King、Tom Waits、Bob Dylan、Duane Allman、Eric Clapton、Neil Young、Mike Oldfield、PVD、David Bowie、Muddy Waters、Nick Cave、Leonard Cohen、Syd Barrett、Johnny Cash、Peter Murphy、David Tibet、Michael Gira、Billy Corgan、Frank Zappa、Lou Reed、Mark Kozelek、Rose Mcdowall、Neil Halstead、Freddie Mercury、Ozzy Osbourne、椎名林檎、窦唯、高崎晃、高桥美玲、Syu、曽我部恵一、奥田民生、山崎まさよし、浅井健一、千叶甫佑、徳永英明、菅野洋子、羽田裕美、阪井泉水、川井宪次、小田和正、Slash、Paul McCartney、Lee Morgan、John Coltrane、Ben Webster、Jim Morrison、Aretha Franklin、Thom Yorke、John Lee Hooker、Clifford brown
+**喜欢的音乐人**：小西康陽、松任谷由実、B.B. King、Tom Waits、Bob Dylan、Duane Allman、Eric Clapton、Neil Young、Mike Oldfield、PVD、David Bowie、Muddy Waters、Nick Cave、Leonard Cohen、Syd Barrett、Johnny Cash、Peter Murphy、David Tibet、Michael Gira、Billy Corgan、Frank Zappa、Lou Reed、Mark Kozelek、Rose Mcdowall、Neil Halstead、Freddie Mercury、Ozzy Osbourne、椎名林檎、窦唯、高崎晃、高桥美玲、Syu、曽我部恵一、奥田民生、山崎まさよし、浅井健一、千叶甫佑、徳永英明、菅野洋子、羽田裕美、阪井泉水、川井宪次、小田和正、Slash、Paul McCartney、Lee Morgan、John Coltrane、Ben Webster、Jim Morrison、Aretha Franklin、Thom Yorke、John Lee Hooker、Clifford brown
 
 **喜爱的攀岩者**：Ueli Steck
