@@ -80,12 +80,12 @@ slug = "/several hugo shortcoeds samples/"
 
 {{< wp tag="膜蛤文化" lang="zh" title="《神秘的膜蛤文化》" >}}
 
-## 豆瓣（失效ing，官方已下架api）
+## 豆瓣
 
 ```bash
 {{</* douban ID */>}}
 ```
-此处的ID是电影的IMDB号或者书籍的ISBN序列号
+此处的ID是电影的IMDB号（失效，官方已下架api）或者书籍的ISBN序列号
 
 效果如下：
 
