@@ -80,7 +80,7 @@ slug = "/several hugo shortcoeds samples/"
 
 {{< wp tag="膜蛤文化" lang="zh" title="《神秘的膜蛤文化》" >}}
 
-## 豆瓣（失效，官方已下架api）
+## 豆瓣（失效ing，官方已下架api）
 
 ```bash
 {{</* douban ID */>}}
