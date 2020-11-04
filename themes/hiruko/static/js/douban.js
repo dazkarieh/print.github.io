@@ -17,7 +17,7 @@ $(document).ready(function () {
                         db_genres += data.genres[i] + " ";
                     }
                     var db_star = Math.ceil(data.rating.average)
-                    var qiniu_cache = data.images.large.replace(/https:\/\/img.\.doubanio\.com/g,"https://lmm.96-wx.com");//七牛cdn缓存
+                    var db_image = data.images.large.replace('img', 'images.weserv.nl/?url=img')
                     $('#db' + id).html(
                         "<div class='post-preview--meta'><div class='post-preview--middle'><h4 class='post-preview--title'><a target='_blank' href='" +
                         data.alt + "'>《" + data.title + "》</a></h4><div class='rating'><div class='rating-star allstar" +
@@ -26,19 +26,20 @@ $(document).ready(function () {
                         db_casts + " / 类型：" + db_genres + " / " + data.year +
                         "</time><section style='max-height:75px;overflow:hidden;' class='post-preview--excerpt'>" +
                         data.summary +
-                        "</section></div></div><div class='post-preview--image' style='background-image:url("+qiniu_cache+");'></div>");
+                        "</section></div></div><div class='post-preview--image' style='background-image:url(" +
+        db_image + ");'></div>");
                 }
             });
         } else if (id.length > 9) {
             var url = "https://api.douban.com/v2/book/isbn/" + id +
-                "?fields=alt,title,subtitle,rating,author,publisher,pubdate,summary,images&apikey=0dad551ec0f84ed02907ff5c42e8ec70";
+                "?fields=alt,title,subtitle,rating,author,publisher,pubdate,summary,images&apikey=0df993c66c0c636e29ecbb5344252a4a";
             $.ajax({
                 url: url,
                 type: 'GET',
                 dataType: 'JSONP',
                 success: function (data) {
                     var db_star = Math.ceil(data.rating.average)
-                    var qiniu_cache = data.images.large.replace(/https:\/\/img.\.doubanio\.com/g,"https://lmm.96-wx.com");//七牛cdn缓存
+                    var db_image = data.images.large.replace('img', 'images.weserv.nl/?url=img')
                     $('#db' + id).html(
                         "<div class='post-preview--meta'><div class='post-preview--middle'><h4 class='post-preview--title'><a target='_blank' href='" +
                         data.alt + "'>《" + data.title + "》" + data.subtitle +
@@ -48,7 +49,8 @@ $(document).ready(function () {
                         " / " + data.pubdate +
                         "</time><section style='max-height:75px;overflow:hidden;' class='post-preview--excerpt'>" +
                         data.summary +
-                        "</section></div></div><div class='post-preview--image' style='background-image:url("+qiniu_cache+");'></div>");
+                        "</section></div></div><div class='post-preview--image' style='background-image:url(" +
+        db_image + ");'></div>");
                 }
             });
         } else {
