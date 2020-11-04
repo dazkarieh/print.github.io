@@ -229,14 +229,6 @@ slug = "/several hugo shortcoeds samples/"
 增加参数 `"newtab"`可以以新标签页的形式打开。
 
 
-## 打字机模式 （typeit）
-
-如题：
-
-{{< typeit tag=h4 >}}
-This is a *paragraph* with **typing animation** based on [消夏録](https://tin6.com/)
-{{< /typeit >}}
-
 ## 个性化引用（customed blackquote）
 
 ```bash
