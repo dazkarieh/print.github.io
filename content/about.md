@@ -6,10 +6,7 @@ pagetype: "about"
 comments: false
 ---
 - 文史专栏作者
-- INTJ人格
-- 摄影玩家
 - 临济宗信徒
-- 曾我部惠一(Sunny Day Service vo.)一生粉
 - 布鲁斯口琴爱好者
 - 一级铲屎官
 - 前端门外汉
@@ -33,11 +30,11 @@ comments: false
 
 **本土关注**：张悦、柴利增、梅远贵、李奇、尹超、范欣、许闯、冯海、韦来、谢星、小武、陈曦
 
-**心水的女优**：菅野紗世、小倉由菜、馬場ふみか、桃乃木かな、保坂えり、富樫あずさ、鎌田紘子、中条彩未、古畑星夏、Anna Sbitnaya、Angelina Danilova、Lena Anderson、神室舞衣、石川恋、牧野真莉爱（まきのまりあ）、上白石萌音
+**心水的女优**：菅野紗世、小倉由菜、有栖るる、岬ななみ、桃乃木かな、保坂えり、富樫あずさ、鎌田紘子、Melody Marks、中条彩未、古畑星夏、Anna Sbitnaya、Angelina Danilova、Lena Anderson、神室舞衣、石川恋、牧野真莉爱（まきのまりあ）
 
 **喜欢的音乐类型**：
-Chicago Blues、Pop folk、Neo folk、Pagan folk、Psychedelic folk、Trash metal、Old-school metal、Vocal trance、Hard Bebop、Brit-pop、Shoegazing、Martial industry、Tribal
+Chicago Blues、Pop folk、Neo folk、Pagan folk、Japanese City Pop、Psychedelic folk、Trash metal、Old-school metal、Vocal trance、Hard Bebop、Brit-pop、Shoegazing、Martial industry、Tribal
 
-**喜欢的音乐人**：小西康陽、松任谷由実、B.B. King、Tom Waits、Bob Dylan、Duane Allman、Eric Clapton、Neil Young、Mike Oldfield、PVD、David Bowie、Muddy Waters、Nick Cave、Leonard Cohen、Syd Barrett、Johnny Cash、Peter Murphy、David Tibet、Michael Gira、Billy Corgan、Frank Zappa、Lou Reed、Mark Kozelek、Rose Mcdowall、Neil Halstead、Freddie Mercury、Ozzy Osbourne、椎名林檎、窦唯、高崎晃、高桥美玲、Syu、曽我部恵一、奥田民生、山崎まさよし、浅井健一、千叶甫佑、徳永英明、菅野洋子、羽田裕美、阪井泉水、川井宪次、小田和正、Slash、Paul McCartney、Lee Morgan、John Coltrane、Ben Webster、Jim Morrison、Aretha Franklin、Thom Yorke、John Lee Hooker、Clifford brown
+**喜欢的音乐人**：小西康陽、松任谷由実、渡辺香津美、中本マリ、大貫妙子、坪倉唯子、B.B.King、Tom Waits、Bob Dylan、Duane Allman、Eric Clapton、Neil Young、Mike Oldfield、PVD、David Bowie、Muddy Waters、Nick Cave、Leonard Cohen、Syd Barrett、Johnny Cash、Peter Murphy、David Tibet、Michael Gira、Billy Corgan、Frank Zappa、Lou Reed、Mark Kozelek、Rose Mcdowall、Neil Halstead、Freddie Mercury、Ozzy Osbourne、椎名林檎、窦唯、高崎晃、高桥美玲、Syu、曽我部恵一、奥田民生、山崎まさよし、浅井健一、千叶甫佑、徳永英明、菅野洋子、羽田裕美、川井宪次、小田和正、Slash、Paul McCartney、Lee Morgan、John Coltrane、Ben Webster、Jim Morrison、Aretha Franklin、Thom Yorke、John Lee Hooker、Clifford brown
 
 **喜爱的攀岩者**：Ueli Steck
