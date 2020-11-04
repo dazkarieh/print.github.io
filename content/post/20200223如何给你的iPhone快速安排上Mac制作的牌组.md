@@ -94,6 +94,12 @@ $ python -m http.server  8888
 在终端界面中按下 `ctrl+c` 停止
 
 
+
+{{% notice note %}}
+20201104更新：升级到iOS14后发现直接airdrop给iPhone即可，系统默认由anki直接导入akpg文件。故，以上仅供存档。
+{{% /notice %}}
+
+
 [^1]: [anki manual:iTunes Import/Export](https://apps.ankiweb.net/docs/am-manual.html#itunes-import/export)
 [^2]: [怎么获取anki中的分享牌组，怎么下载到anki呢](https://www.zhihu.com/question/331439631/answer/740820205)
 [^3]: [利用群晖Synology进行Anki同步](https://zhuanlan.zhihu.com/p/70269217)
