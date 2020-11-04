@@ -2,7 +2,7 @@ $(document).ready(function () {
     $('.douban_item').each(function () {
         var id = $(this).attr('date-dbid').toString();
         if (id.length < 9) {
-            var url = "https://api.douban.com/v2/movie/subject/" + id + "?apikey=0df993c66c0c636e29ecbb5344252a4a";
+            var url = "https://api.douban.com/v2/movie/subject/" + id + "?apikey=054022eaeae0b00e0fc068c0c0a2102a";
             $.ajax({
                 url: url,
                 type: 'GET',
@@ -32,7 +32,7 @@ $(document).ready(function () {
             });
         } else if (id.length > 9) {
             var url = "https://api.douban.com/v2/book/isbn/" + id +
-                "?fields=alt,title,subtitle,rating,author,publisher,pubdate,summary,images&apikey=0df993c66c0c636e29ecbb5344252a4a";
+                "?fields=alt,title,subtitle,rating,author,publisher,pubdate,summary,images&apikey=054022eaeae0b00e0fc068c0c0a2102a";
             $.ajax({
                 url: url,
                 type: 'GET',
