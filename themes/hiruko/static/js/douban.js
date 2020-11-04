@@ -1,8 +1,7 @@
 $(document).ready(function () {
     $('.douban_item').each(function () {
         var id = $(this).attr('date-dbid').toString();
-        var type = $(this).attr('data-type');
-        if (type == 'movie') {
+        if (id.length < 9) {
             var url = "https://api.douban.com/v2/movie/subject/" + id + "?apikey=0df993c66c0c636e29ecbb5344252a4a";
             $.ajax({
                 url: url,
@@ -30,7 +29,7 @@ $(document).ready(function () {
                         "</section></div></div><div class='post-preview--image' style='background-image:url("+qiniu_cache+");'></div>");
                 }
             });
-        } else if (type == 'book') {
+        } else if (id.length > 9) {
             var url = "https://api.douban.com/v2/book/isbn/" + id +
                 "?fields=alt,title,subtitle,rating,author,publisher,pubdate,summary,images&apikey=0dad551ec0f84ed02907ff5c42e8ec70";
             $.ajax({
