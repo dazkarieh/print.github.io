@@ -80,7 +80,7 @@ slug = "/several hugo shortcoeds samples/"
 
 {{< wp tag="膜蛤文化" lang="zh" title="《神秘的膜蛤文化》" >}}
 
-## 豆瓣
+## 豆瓣（失效，官方已下架api）
 
 ```bash
 {{</* douban ID */>}}
@@ -227,6 +227,89 @@ slug = "/several hugo shortcoeds samples/"
 {{% staticref "files/Summerwork2016.pdf" "newtab" %}}下载我的作品{{% /staticref %}}
 
 增加参数 `"newtab"`可以以新标签页的形式打开。
+
+## E-charts图
+
+支持json、yaml、toml等数据格式，效果如下：
+
+{{< echarts >}}
+{
+  "title": {
+    "text": "Summary Line Chart",
+    "top": "2%",
+    "left": "center"
+  },
+  "tooltip": {
+    "trigger": "axis"
+  },
+  "legend": {
+    "data": ["Email Marketing", "Affiliate Advertising", "Video Advertising", "Direct View", "Search Engine"],
+    "top": "10%"
+  },
+  "grid": {
+    "left": "5%",
+    "right": "5%",
+    "bottom": "5%",
+    "top": "20%",
+    "containLabel": true
+  },
+  "toolbox": {
+    "feature": {
+      "saveAsImage": {
+        "title": "Save as Image"
+      }
+    }
+  },
+  "xAxis": {
+    "type": "category",
+    "boundaryGap": false,
+    "data": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+  },
+  "yAxis": {
+    "type": "value"
+  },
+  "series": [
+    {
+      "name": "Email Marketing",
+      "type": "line",
+      "stack": "Total",
+      "data": [120, 132, 101, 134, 90, 230, 210]
+    },
+    {
+      "name": "Affiliate Advertising",
+      "type": "line",
+      "stack": "Total",
+      "data": [220, 182, 191, 234, 290, 330, 310]
+    },
+    {
+      "name": "Video Advertising",
+      "type": "line",
+      "stack": "Total",
+      "data": [150, 232, 201, 154, 190, 330, 410]
+    },
+    {
+      "name": "Direct View",
+      "type": "line",
+      "stack": "Total",
+      "data": [320, 332, 301, 334, 390, 330, 320]
+    },
+    {
+      "name": "Search Engine",
+      "type": "line",
+      "stack": "Total",
+      "data": [820, 932, 901, 934, 1290, 1330, 1320]
+    }
+  ]
+}
+{{< /echarts >}}
+
+## 打字机模式 （typeit）
+
+如题：
+
+{{< typeit tag=h4 >}}
+This is a *paragraph* with **typing animation** based on [消夏録](https://tin6.com/)
+{{< /typeit >}}
 
 ## 个性化引用（customed blackquote）
 
