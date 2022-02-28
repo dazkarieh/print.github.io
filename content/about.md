@@ -5,12 +5,12 @@ type: "about"
 pagetype: "about"
 comments: false
 ---
+- 律师
 - 文史专栏作者
 - 临济宗信徒
 - 布鲁斯口琴爱好者
 - 一级铲屎官
 - 前端门外汉
-- 法律从业者
 - 三字头，未二够
 
 ---
@@ -35,6 +35,4 @@ comments: false
 **喜欢的音乐类型**：
 Chicago Blues、Pop folk、Neo folk、Pagan folk、Japanese City Pop、Psychedelic folk、Trash metal、Old-school metal、Vocal trance、Hard Bebop、Brit-pop、Shoegazing、Martial industry、Tribal
 
-**喜欢的音乐人**：小西康陽、松任谷由実、渡辺香津美、中本マリ、大貫妙子、坪倉唯子、B.B.King、Tom Waits、Bob Dylan、Duane Allman、Eric Clapton、Neil Young、Mike Oldfield、PVD、David Bowie、Muddy Waters、Nick Cave、Leonard Cohen、Syd Barrett、Johnny Cash、Peter Murphy、David Tibet、Michael Gira、Billy Corgan、Frank Zappa、Lou Reed、Mark Kozelek、Rose Mcdowall、Neil Halstead、Freddie Mercury、Ozzy Osbourne、椎名林檎、窦唯、高崎晃、高桥美玲、Syu、曽我部恵一、奥田民生、山崎まさよし、浅井健一、千叶甫佑、徳永英明、菅野洋子、羽田裕美、川井宪次、小田和正、Slash、Paul McCartney、Lee Morgan、John Coltrane、Ben Webster、Jim Morrison、Aretha Franklin、Thom Yorke、John Lee Hooker、Clifford brown
-
-**喜爱的攀岩者**：Ueli Steck
+**喜欢的音乐人**：小西康陽、松任谷由実、渡辺香津美、中本マリ、大貫妙子、坪倉唯子、B.B.King、Tom Waits、Bob Dylan、Duane Allman、Eric Clapton、Neil Young、Mike Oldfield、PVD、David Bowie、Muddy Waters、Nick Cave、Leonard Cohen、Syd Barrett、Johnny Cash、Peter Murphy、David Tibet、Michael Gira、Billy Corgan、Frank Zappa、Lou Reed、Mark Kozelek、Rose Mcdowall、Neil Halstead、Freddie Mercury、Ozzy Osbourne、椎名林檎、窦唯、高崎晃、高桥美玲、Syu、曽我部恵一、奥田民生、山崎まさよし、浅井健一、千叶甫佑、徳永英明、菅野洋子、羽田裕美、川井宪次、小田和正、Slash、Paul McCartney、Lee Morgan、John Coltrane、Ben Webster、Jim Morrison、Aretha Franklin、Thom Yorke、John Lee Hooker、Clifford brown、Grant Green
