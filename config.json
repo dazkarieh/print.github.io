@@ -126,14 +126,12 @@
         "Copyright": {
             "Name": "Ian",
             "From": "2004",
-            "To": "2022"
+            "To": "2023"
         },
         "waline": {
             "serverURL": "archie-comment.vercel.app",
             "placeholder": "评论留言",
-            "anonymous": "一个不愿留名的路人",
-            "notify": "false",
-            "avatar": "mm"
+            "anonymous": "一个不愿留名的路人"
         },
       "busuanzi": {
           "enable": "true"

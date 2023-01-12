@@ -112,5 +112,6 @@ Error: "Class or object doesn't exists."
 如果希望对评论的管理更上一阶，那么建议增加Valine后台管理面板，具体设置参数请见deserts的《[Valine Admin 配置手册](https://deserts.io/valine-admin-document/)》
 
 {{% notice note %}}
-2021年说明：本教程因leancloud政策变更现已失效，仅供参考
+2021年说明：本教程因leancloud政策变更现已失效，仅供参考。
+2022年说明，本站评论系统已更换至valine二开版本的[Waline](https://waline.js.org/)。
 {{% /notice %}}

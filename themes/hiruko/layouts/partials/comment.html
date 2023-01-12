@@ -8,14 +8,11 @@
     serverURL: '{{ .Site.Params.waline.serverURL }}',
     placeholder:  '{{  .Site.Params.waline.placeholder }}',
     anonymous:  '{{  .Site.Params.waline.anonymous }}',
-    //comment: true, // 评论数统计
-    //count: 10,// 用户排行榜
-   // reaction: true, // 开启反应
-    // 设置 emoji 为微博、哔站、推特
+    search: false,
+    comment: false, // 评论数统计
+    reaction: false, // 关闭文章反应
     emoji: [
       '//unpkg.com/@waline/emojis@1.1.0/weibo',
-      '//unpkg.com/@waline/emojis@1.1.0/bilibili',
-      '//unpkg.com/@waline/emojis@1.1.0/tw-emoji',
     ],
   });
   </script>
