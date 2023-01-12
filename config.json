@@ -128,12 +128,10 @@
             "From": "2004",
             "To": "2022"
         },
-        "Valine": {
-            "ID": "hxyN8cuSWjMXJtzzYc4cbL9U-MdYXbMMI",
-            "Key": "KfrGGB2VXb5wL4q8qJM5DLkD",
-            "emojiURL": "https://cloud.panjunwen.com/alu",
+        "waline": {
+            "serverURL": "archie-comment.vercel.app",
             "placeholder": "评论留言",
-            "verify": "false",
+            "anonymous": "一个不愿留名的路人",
             "notify": "false",
             "avatar": "mm"
         },

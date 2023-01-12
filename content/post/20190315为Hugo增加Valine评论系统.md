@@ -4,7 +4,7 @@ date= 2019-03-15T16:16:03+08:00
 type = "post"
 tags = ["valine","hugo"]
 toc = true
-comments = true
+comments = false
 codes =["bash","php"]
 categories = ["技术"]
 mathjax = false
@@ -111,6 +111,6 @@ Error: "Class or object doesn't exists."
 ### 第四步
 如果希望对评论的管理更上一阶，那么建议增加Valine后台管理面板，具体设置参数请见deserts的《[Valine Admin 配置手册](https://deserts.io/valine-admin-document/)》
 
-后台管理界面如下图
-
-{{<img src="https://ian2.oss-cn-hangzhou.aliyuncs.com/clt6/2019-03-21 at 11.03.jpg" alt="">}} 
+{{% notice note %}}
+2021年说明：本教程因leancloud政策变更现已失效，仅供参考
+{{% /notice %}}

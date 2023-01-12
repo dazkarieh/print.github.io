@@ -73,6 +73,12 @@
   <link rel="stylesheet" href="{{ $.Site.Params.CDN.JQueryTocify.Path }}/jquery.tocify/{{ $.Site.Params.CDN.JQueryTocify.Version }}/stylesheets/jquery.tocify.min.css">
 {{- end }}
 
+<!--comments for post -->
+{{- if eq .Params.comments true }}
+  <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css">
+{{- end }}
+  
+  
 {{ if .Params.vega }}
 <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
 <script src="https://cdn.jsdelivr.net/npm/vega-lite@2"></script>
