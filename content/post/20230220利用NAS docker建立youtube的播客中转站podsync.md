@@ -131,12 +131,16 @@ Docker 将拖取最新版本的 Podsync。
 ```bash
 docker run \
     -p 6969:6969 \  #映射的外部端口，如有冲突可改高位端口
-    -v /share/CACHEDEV1_DATA/Container/Docker/podsync:/app/data/ \  #根据自己的文件夹路径来映射，冒号后面建议使用默认参数
-    -v /share/CACHEDEV1_DATA/Container/Docker/podsync/config.toml:/app/config.toml \ #根据自己的文件夹路径来映射，冒号后面建议使用默认参数
+    -v ${PWD}:/app/data/ \  #根据自己的文件夹路径来映射，冒号后面建议使用默认参数
+    -v ${PWD}/config.toml:/app/config.toml \ #根据自己的文件夹路径来映射，冒号后面建议使用默认参数
     tdeutsch/podsync:latest
 ```
 
-打开NAS的域名地址:6969，就可以看到后缀名为xml的Feed URL以及对应的下载目录。
+打开NAS域名:端口或内网ip地址:商品，如
+```
+http://${IP_ADDRESS}:6969
+```
+就可以看到后缀名为xml的Feed URL以及对应的下载目录。
 
 [^1]: [2023 年如何查找 Youtube Channel ID？ - Another Dayu](https://anotherdayu.com/2023/4530/)
 [^2]: [podsync/config.toml.example](https://github.com/mxpv/podsync/blob/main/config.toml.example)
