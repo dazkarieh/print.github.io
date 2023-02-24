@@ -1,6 +1,6 @@
 +++
 title= "利用NAS Docker建立YouTube播客中转"
-date= 2023-2-20T22:15:26+08:00
+date= 2023-02-22T09:18:26+08:00
 type = "post"
 categories = ["技术"]
 comments = false
@@ -61,7 +61,7 @@ data_dir = "/app/data" # 保留默认路径，我曾经改为QNAP绝对路径，
 hostname = "http://xxxxxx.com:6969" # xxxxx改为可以公布的外网域名
 
 [tokens]
-youtube = "AIzaSyD168IA0_o8ctnimonaKQkXtuuSTnKKoUo"
+youtube = "AIzaSyxxxxxxxxxxxxxxxxxxxxxxxxxxxxKoUo" #填入申请的Google API Key，注意：每日有配额限制
 
 [downloader]
 self_update = true # 自动更新下载程序
