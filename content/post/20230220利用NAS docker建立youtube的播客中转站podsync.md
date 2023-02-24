@@ -15,7 +15,7 @@ keywords = ["youtube","podcast","podsync","播客"]
 tags = ["youtube","podcast","podsync","播客"]
 +++
 
-之前在《[二零二二年播客指北]({{< relref"20221218二零二二年播客指北.md" >}})》提到过podsync，当时鉴于家里的老古董群晖214play(Intel Atom CPU)硬件上不支持Docker，用了本地youtube-dl手动转换的方式。最近添置了QNAP TS-464C，尝试了NAS Docker玩法。
+之前在《[二零二二年播客指北]({{< relref"20221218二零二二年播客指北.md" >}})》提到过Podsync，当时鉴于家里的老古董群晖214 play(Intel Atom CPU)硬件上不支持Docker，用了本地Youtube-dl手动转换的方式。最近添置了QNAP TS-464C，尝试了NAS Docker玩法。
 
 ## YouTube Data API
 
@@ -126,7 +126,7 @@ docker pull tdeutsch/podsync:latest # 不要使用官方的2.5.0镜像(mxpv/pods
 ```
 Docker 将拖取最新版本的 Podsync。
 
-通过SSH登录QNAP终端运行docker run，也可以通过Docker Compose的建立容器：
+通过SSH登录QNAP终端运行Docker Run，也可以通过Docker Compose的建立容器：
 
 ```bash
 docker run \
@@ -136,11 +136,11 @@ docker run \
     tdeutsch/podsync:latest
 ```
 
-打开NAS域名:端口或内网ip地址:商品，如
+在浏览器地址栏输入`NAS域名:端口`或`内网ip地址:端口`，如
 ```
 http://${IP_ADDRESS}:6969
 ```
-就可以看到后缀名为xml的Feed URL以及对应的下载目录。
+就可以看到后缀名为XML的Feed URL以及对应的下载目录。
 
 [^1]: [2023 年如何查找 Youtube Channel ID？ - Another Dayu](https://anotherdayu.com/2023/4530/)
 [^2]: [podsync/config.toml.example](https://github.com/mxpv/podsync/blob/main/config.toml.example)
