@@ -105,7 +105,6 @@
         "NavItems" : [
             [ "最新文章",    "/" ],
             [ "文字归档", "/post" ],
-            [ "摄影作品", "https://icrtt.com", "_blank"],
             [ "标签墙", "/tags"],
             [ "作者简介",   "/about" ],
             [ "Feed订阅",     "/feed.xml" ]
